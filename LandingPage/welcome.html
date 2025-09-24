@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenido a BoostifyPro</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        background: '#0A0A0A',
+                        foreground: '#F8F8F8',
+                        primary: {
+                            DEFAULT: '#D4AF37',
+                            foreground: '#0A0A0A'
+                        },
+                        secondary: {
+                            DEFAULT: '#1A1A1A',
+                            foreground: '#F8F8F8'
+                        },
+                        muted: {
+                            foreground: '#A1A1AA'
+                        },
+                        card: '#1A1A1A',
+                        border: '#27272A',
+                    },
+                    fontFamily: {
+                        headline: ['Space Grotesk', 'sans-serif'],
+                        body: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-body bg-background text-foreground antialiased">
+    <div class="flex flex-col items-center justify-center min-h-screen p-4">
+        <div class="w-full max-w-2xl mx-auto text-center">
+            <img src="./BoostifyPro 13 cuadrada.png" alt="BoostifyPro Logo" class="h-24 w-24 mx-auto mb-8 rounded-lg">
+            <h1 class="font-headline text-4xl md:text-5xl font-bold text-primary mb-4">¡Bienvenido a Bordo!</h1>
+            <p class="text-xl text-muted-foreground mb-6">Tu pago ha sido confirmado con éxito. Agradecemos enormemente la confianza que depositas en nuestro equipo.</p>
+            
+            <div class="bg-card border border-border rounded-lg p-8 text-left">
+                <h2 class="font-headline text-2xl font-bold mb-4">Siguientes Pasos</h2>
+                <p class="text-muted-foreground mb-6">Estás a un solo paso de iniciar tu transformación. Por favor, completa el siguiente formulario para que podamos configurar tu acceso y darte la bienvenida a la comunidad.</p>
+                
+                <form id="welcome-form" class="space-y-4">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-muted-foreground">Nombre Completo</label>
+                        <input type="text" id="name" name="name" required class="mt-1 block w-full bg-secondary border-border rounded-md p-3 text-foreground focus:outline-none focus:ring-2 focus:ring-primary">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-muted-foreground">Correo Electrónico</label>
+                        <input type="email" id="email" name="email" required class="mt-1 block w-full bg-secondary border-border rounded-md p-3 text-foreground focus:outline-none focus:ring-2 focus:ring-primary">
+                    </div>
+                    <div>
+                        <label for="phone" class="block text-sm font-medium text-muted-foreground">Teléfono</label>
+                        <input type="tel" id="phone" name="phone" required class="mt-1 block w-full bg-secondary border-border rounded-md p-3 text-foreground focus:outline-none focus:ring-2 focus:ring-primary">
+                    </div>
+                    <div>
+                        <label for="company" class="block text-sm font-medium text-muted-foreground">Nombre de la Empresa</label>
+                        <input type="text" id="company" name="company" required class="mt-1 block w-full bg-secondary border-border rounded-md p-3 text-foreground focus:outline-none focus:ring-2 focus:ring-primary">
+                    </div>
+                    <button type="submit" class="w-full inline-flex items-center justify-center whitespace-nowrap text-sm font-medium bg-primary text-primary-foreground hover:bg-primary/90 h-11 rounded-md px-8 group">
+                        Enviar y Acceder
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                    </button>
+                </form>
+            </div>
+
+            <div id="confirmation-message" class="hidden mt-8 bg-card border border-border rounded-lg p-8 text-center">
+                <h2 class="font-headline text-2xl font-bold mb-4">¡Gracias!</h2>
+                <p class="text-muted-foreground">Revisa tu correo y WhatsApp donde te enviaremos toda la información.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const SUPABASE_URL = 'TU_SUPABASE_URL'; // Reemplaza con tu URL de Supabase
+            const SUPABASE_ANON_KEY = 'TU_SUPABASE_ANON_KEY'; // Reemplaza con tu clave anónima de Supabase
+            const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+            const welcomeForm = document.getElementById('welcome-form');
+            const confirmationMessage = document.getElementById('confirmation-message');
+
+            welcomeForm.addEventListener('submit', async function (e) {
+                e.preventDefault();
+                
+                const formData = new FormData(welcomeForm);
+                const data = {
+                    nombre_completo: formData.get('name'),
+                    email: formData.get('email'),
+                    telefono: formData.get('phone'),
+                    nombre_empresa: formData.get('company')
+                };
+
+                const { error } = await supabase.from('clientes').insert([data]);
+
+                if (error) {
+                    console.error('Error al guardar los datos:', error);
+                    alert('Hubo un error al enviar tus datos. Por favor, inténtalo de nuevo.');
+                } else {
+                    console.log('Datos guardados exitosamente:', data);
+                    welcomeForm.parentElement.classList.add('hidden');
+                    confirmationMessage.classList.remove('hidden');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

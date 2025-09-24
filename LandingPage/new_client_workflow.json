@@ -1,0 +1,75 @@
+{
+  "name": "New Client Onboarding",
+  "nodes": [
+    {
+      "parameters": {},
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        250,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "authentication": "supabaseApi",
+        "table": "clientes",
+        "schema": "public",
+        "events": [
+          "INSERT"
+        ]
+      },
+      "name": "Supabase Trigger",
+      "type": "n8n-nodes-base.supabaseTrigger",
+      "typeVersion": 1,
+      "position": [
+        500,
+        300
+      ],
+      "credentials": {
+        "supabaseApi": {
+          "id": "YOUR_SUPABASE_CREDENTIALS_ID",
+          "name": "Supabase account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "smtp",
+        "to": "={{$json[\"body\"][\"record\"][\"email\"]}}",
+        "subject": "¡Bienvenido a BoostifyPro!",
+        "html": "<h1>¡Hola {{$json[\"body\"][\"record\"][\"nombre_completo\"]}}!</h1><p>Gracias por registrarte. Pronto recibirás más información sobre tus próximos pasos.</p>"
+      },
+      "name": "Send Email",
+      "type": "n8n-nodes-base.sendEmail",
+      "typeVersion": 1,
+      "position": [
+        750,
+        300
+      ],
+      "credentials": {
+        "smtp": {
+          "id": "YOUR_SMTP_CREDENTIALS_ID",
+          "name": "SMTP account"
+        }
+      }
+    }
+  ],
+  "connections": {
+    "Supabase Trigger": {
+      "main": [
+        [
+          {
+            "node": "Send Email",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {},
+  "id": "1"
+}
