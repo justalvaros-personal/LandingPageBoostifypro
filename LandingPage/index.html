@@ -45,11 +45,10 @@
         .font-headline {
             font-family: 'Space Grotesk', sans-serif;
         }
-        /* Efecto sutil de brillo en botones primary */
         .btn-glow:hover {
             box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
         }
-        /* Animación Marquee */
+        /* Animación Marquee para logos */
         @keyframes marquee {
             0% { transform: translateX(0); }
             100% { transform: translateX(-50%); }
@@ -96,7 +95,7 @@
         </header>
 
         <main>
-            <section class="relative pt-32 pb-12 md:pt-44 md:pb-20 text-center bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-secondary via-background to-background">
+            <section class="relative pt-32 pb-20 md:pt-44 md:pb-32 text-center bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-secondary via-background to-background">
                 <div class="absolute pointer-events-none inset-0 flex items-center justify-center bg-background [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
                 <div class="container mx-auto px-4 z-10 relative">
                     <div class="inline-block mb-4 px-3 py-1 rounded-full border border-primary/30 bg-primary/10 text-primary text-xs font-bold tracking-wider uppercase animate-pulse">
@@ -109,7 +108,7 @@
                         Implementamos <strong>Sistemas de Crecimiento Híbrido</strong> (Consultoría + Nuestro SaaS) para empresas que buscan facturar +$50k/mes extra antes de marzo.
                     </p>
                     
-                    <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
+                    <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
                         <a href="#pricing" class="w-full sm:w-auto inline-flex items-center justify-center whitespace-nowrap text-base font-bold bg-primary text-primary-foreground hover:bg-primary/90 h-12 rounded-md px-8 group btn-glow transition-all" data-translate-key="heroCta">
                             Ver si mi empresa califica
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
@@ -118,25 +117,21 @@
                             Ver Evidencia
                         </a>
                     </div>
-
-                    <div class="max-w-5xl mx-auto bg-secondary/40 border border-primary/20 rounded-2xl p-6 backdrop-blur-md shadow-2xl shadow-primary/5 grid grid-cols-1 md:grid-cols-3 gap-8 divide-y md:divide-y-0 md:divide-x divide-border/50">
-                        <div class="flex flex-col items-center justify-center">
-                            <span class="text-4xl font-bold font-headline text-white">+50</span>
-                            <span class="text-xs uppercase tracking-widest text-primary font-semibold mt-1">Empresas Partner</span>
-                        </div>
-                        <div class="flex flex-col items-center justify-center">
-                            <span class="text-4xl font-bold font-headline text-white">+$7M USD</span>
-                            <span class="text-xs uppercase tracking-widest text-primary font-semibold mt-1">Generados (Revenue)</span>
-                        </div>
-                        <div class="flex flex-col items-center justify-center">
-                            <span class="text-4xl font-bold font-headline text-white">LATAM</span>
-                            <span class="text-xs uppercase tracking-widest text-primary font-semibold mt-1">Presencia Regional</span>
+                    
+                    <div class="mt-12 flex items-center justify-center gap-8 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
+                        <span class="text-sm font-semibold text-muted-foreground uppercase tracking-widest">Tecnología potenciada por:</span>
+                        <div class="flex gap-4 text-muted-foreground font-headline font-bold">
+                            <span>OpenAI</span>
+                            <span>/</span>
+                            <span>Supabase</span>
+                            <span>/</span>
+                            <span>Vercel</span>
                         </div>
                     </div>
                 </div>
             </section>
 
-             <div class="border-y border-border bg-secondary/20 overflow-hidden py-6">
+            <div class="border-y border-border bg-secondary/20 overflow-hidden py-6">
                 <div class="container mx-auto px-4 mb-4 text-center">
                     <p class="text-xs font-medium text-muted-foreground uppercase tracking-widest" data-translate-key="poweredBy">Potenciado por la tecnología de:</p>
                 </div>
@@ -221,20 +216,26 @@
                     </div>
 
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto items-stretch">
+                        
                         <div class="rounded-xl border bg-card text-card-foreground shadow-sm flex flex-col border-border hover:border-primary/50 transition-all duration-300">
                             <div class="p-8 pb-4">
                                 <h3 class="font-headline text-2xl font-bold" data-translate-key="plan1Name">IA Despegue</h3>
                                 <p class="text-sm text-primary font-semibold mt-1" data-translate-key="plan1Tag">Para empezar rápido</p>
-                                <div class="mt-4 flex items-baseline text-5xl font-bold">$2,000 <span class="text-xl font-normal text-muted-foreground ml-2">USD</span></div>
-                                <p class="text-xs text-muted-foreground mt-2" data-translate-key="plan1Installments">Pago único.</p>
+                                <div class="mt-4 flex items-baseline text-5xl font-bold">
+                                    $2,000 <span class="text-xl font-normal text-muted-foreground ml-2">USD</span>
+                                </div>
+                                <p class="text-xs text-muted-foreground mt-2" data-translate-key="plan1Installments">Pago único. Sin mensualidades ocultas.</p>
                             </div>
                             <div class="px-8 pb-8 flex-grow flex flex-col">
                                 <ul class="space-y-4 text-sm text-muted-foreground mb-8 flex-grow">
-                                    <li class="flex items-start gap-3"><span class="text-green-500">✓</span> <span data-translate-key="plan1Feature1">Diagnóstico Estratégico.</span></li>
+                                    <li class="flex items-start gap-3"><span class="text-green-500">✓</span> <span data-translate-key="plan1Feature1">Diagnóstico Estratégico Express.</span></li>
                                     <li class="flex items-start gap-3"><span class="text-green-500">✓</span> <strong class="text-foreground" data-translate-key="plan1SaaS">Licencia Anual BoostifyOS Lite.</strong></li>
-                                    <li class="flex items-start gap-3"><span class="text-green-500">✓</span> <span data-translate-key="plan1Feature2">1 Agente IA de Calificación.</span></li>
+                                    <li class="flex items-start gap-3"><span class="text-green-500">✓</span> <span data-translate-key="plan1Feature2">1 Agente IA de Calificación (Ventas).</span></li>
+                                    <li class="flex items-start gap-3"><span class="text-green-500">✓</span> <span data-translate-key="plan1Feature3">Automatización de 2 Procesos Clave.</span></li>
                                 </ul>
-                                <a href="https://mpago.la/1PRjFpV" class="w-full inline-flex items-center justify-center whitespace-nowrap text-sm font-bold bg-secondary text-foreground border border-border hover:bg-foreground hover:text-background h-12 rounded-lg transition-colors" data-translate-key="plan1Cta">Contratar Ahora</a>
+                                <a href="https://mpago.la/1PRjFpV" class="w-full inline-flex items-center justify-center whitespace-nowrap text-sm font-bold bg-secondary text-foreground border border-border hover:bg-foreground hover:text-background h-12 rounded-lg transition-colors" data-translate-key="plan1Cta">
+                                    Contratar Ahora
+                                </a>
                                 <p class="text-center text-xs text-muted-foreground mt-3">¿Dudas? <a href="https://calendly.com/boostifypro-clients/30min" class="underline hover:text-primary">Agenda Demo 15 min</a></p>
                             </div>
                         </div>
@@ -244,17 +245,22 @@
                             <div class="p-8 pb-4">
                                 <h3 class="font-headline text-2xl font-bold" data-translate-key="plan2Name">IA Aceleración</h3>
                                 <p class="text-sm text-primary font-semibold mt-1" data-translate-key="plan2Tag">El sistema híbrido completo</p>
-                                <div class="mt-4 flex items-baseline text-5xl font-bold">$2,500 <span class="text-xl font-normal text-muted-foreground ml-2">USD</span></div>
+                                <div class="mt-4 flex items-baseline text-5xl font-bold">
+                                    $2,500 <span class="text-xl font-normal text-muted-foreground ml-2">USD</span>
+                                </div>
                                 <p class="text-xs text-muted-foreground mt-2" data-translate-key="plan2Installments">o 3 cuotas de $900 USD</p>
                             </div>
                             <div class="px-8 pb-8 flex-grow flex flex-col">
                                 <ul class="space-y-4 text-sm text-muted-foreground mb-8 flex-grow">
                                     <li class="flex items-start gap-3"><span class="text-primary">★</span> <span class="font-bold text-foreground" data-translate-key="plan2Feature1">Todo lo del plan Despegue, más:</span></li>
-                                    <li class="flex items-start gap-3"><span class="text-green-500">✓</span> <strong class="text-primary" data-translate-key="plan2SaaS">Licencia PRO BoostifyOS + Setup.</strong></li>
-                                    <li class="flex items-start gap-3"><span class="text-green-500">✓</span> <span data-translate-key="plan2Feature2">3 Sistemas de IA interconectados.</span></li>
-                                    <li class="flex items-start gap-3"><span class="text-green-500">✓</span> <span data-translate-key="plan2Feature3">Sistema de Prospección Automático.</span></li>
+                                    <li class="flex items-start gap-3"><span class="text-green-500">✓</span> <strong class="text-primary" data-translate-key="plan2SaaS">Licencia PRO BoostifyOS + Configuración.</strong></li>
+                                    <li class="flex items-start gap-3"><span class="text-green-500">✓</span> <span data-translate-key="plan2Feature2">3 Sistemas de IA interconectados (Ventas + Ops).</span></li>
+                                    <li class="flex items-start gap-3"><span class="text-green-500">✓</span> <span data-translate-key="plan2Feature3">Sistema de Prospección Outbound Automático.</span></li>
+                                    <li class="flex items-start gap-3"><span class="text-green-500">✓</span> <span data-translate-key="plan2Feature4">Integración Nativa CRM (HubSpot/Salesforce).</span></li>
                                 </ul>
-                                <a href="https://calendly.com/boostifypro-clients/30min" class="w-full inline-flex items-center justify-center whitespace-nowrap text-sm font-bold bg-primary text-primary-foreground hover:bg-primary/90 h-12 rounded-lg btn-glow transition-all" data-translate-key="plan2Cta">Aplicar para Acceso PRO</a>
+                                <a href="https://calendly.com/boostifypro-clients/30min" class="w-full inline-flex items-center justify-center whitespace-nowrap text-sm font-bold bg-primary text-primary-foreground hover:bg-primary/90 h-12 rounded-lg btn-glow transition-all" data-translate-key="plan2Cta">
+                                    Aplicar para Acceso PRO
+                                </a>
                                 <p class="text-center text-xs text-muted-foreground/60 mt-3" data-translate-key="plan2Subtext">Solo 5 cupos nuevos por mes.</p>
                             </div>
                         </div>
@@ -263,16 +269,21 @@
                             <div class="p-8 pb-4">
                                 <h3 class="font-headline text-2xl font-bold" data-translate-key="plan3Name">Partner Estratégico</h3>
                                 <p class="text-sm text-primary font-semibold mt-1" data-translate-key="plan3Tag">Para líderes de mercado</p>
-                                <div class="mt-4 flex items-baseline text-4xl font-bold" data-translate-key="plan3Price">A Medida</div>
+                                <div class="mt-4 flex items-baseline text-4xl font-bold" data-translate-key="plan3Price">
+                                    A Medida
+                                </div>
                                 <p class="text-xs text-muted-foreground mt-2" data-translate-key="plan3Subprice">Consultoría + Revenue Share</p>
                             </div>
                             <div class="px-8 pb-8 flex-grow flex flex-col">
                                 <ul class="space-y-4 text-sm text-muted-foreground mb-8 flex-grow">
                                     <li class="flex items-start gap-3"><span class="text-green-500">✓</span> <span data-translate-key="plan3Feature1">Equipo de Ingeniería IA dedicado.</span></li>
-                                    <li class="flex items-start gap-3"><span class="text-green-500">✓</span> <span data-translate-key="plan3Feature2">LLMs Propios.</span></li>
-                                    <li class="flex items-start gap-3"><span class="text-green-500">✓</span> <span data-translate-key="plan3Feature5">Acceso al "Círculo de Líderes".</span></li>
+                                    <li class="flex items-start gap-3"><span class="text-green-500">✓</span> <span data-translate-key="plan3Feature2">Desarrollo de Modelos Propios (LLMs Fine-tuned).</span></li>
+                                    <li class="flex items-start gap-3"><span class="text-green-500">✓</span> <span data-translate-key="plan3Feature3">Analítica Predictiva avanzada.</span></li>
+                                    <li class="flex items-start gap-3"><span class="text-green-500">✓</span> <span data-translate-key="plan3Feature5">Acceso al "Círculo de Líderes" (Networking).</span></li>
                                 </ul>
-                                <a href="https://calendly.com/boostifypro-clients/30min" class="w-full inline-flex items-center justify-center whitespace-nowrap text-sm font-bold bg-secondary text-foreground border border-border hover:bg-foreground hover:text-background h-12 rounded-lg transition-colors" data-translate-key="plan3Cta">Agendar Reunión Socios</a>
+                                <a href="https://calendly.com/boostifypro-clients/30min" class="w-full inline-flex items-center justify-center whitespace-nowrap text-sm font-bold bg-secondary text-foreground border border-border hover:bg-foreground hover:text-background h-12 rounded-lg transition-colors" data-translate-key="plan3Cta">
+                                    Agendar Reunión Socios
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -281,10 +292,17 @@
 
             <section id="guarantee" class="py-20 bg-secondary/20">
                 <div class="container mx-auto px-4 max-w-4xl text-center border border-primary/20 bg-background/50 rounded-2xl p-8 md:p-12 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 p-4 opacity-10">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" class="text-primary"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"></path></svg>
+                    </div>
                     <h2 class="font-headline text-3xl md:text-4xl font-bold mb-6 text-foreground" data-translate-key="guaranteeTitle">Garantía de Blindaje Total</h2>
-                    <p class="text-lg text-muted-foreground mb-8 leading-relaxed" data-translate-key="guaranteeDescription">Eliminamos tu riesgo. Si tras implementar nuestro sistema y usar nuestro software durante 90 días no generas un <strong>ROI positivo medible</strong>, te devolvemos el <strong>100% de tu dinero</strong>.</p>
+                    <p class="text-lg text-muted-foreground mb-8 leading-relaxed" data-translate-key="guaranteeDescription">
+                        Eliminamos tu riesgo. Si tras implementar nuestro sistema y usar nuestro software durante 90 días no generas un <strong>ROI positivo medible</strong>, te devolvemos el <strong>100% de tu dinero</strong>.
+                    </p>
                     <div class="bg-primary/10 border border-primary/30 p-4 rounded-lg inline-block">
-                        <p class="font-bold text-primary" data-translate-key="guaranteeBold">+ Te pagamos $500 USD adicionales por haberte hecho perder el tiempo.</p>
+                        <p class="font-bold text-primary" data-translate-key="guaranteeBold">
+                            + Te pagamos $500 USD adicionales por haberte hecho perder el tiempo.
+                        </p>
                     </div>
                 </div>
             </section>
@@ -293,29 +311,40 @@
                 <div class="container mx-auto px-4">
                     <div class="text-center mb-16 max-w-3xl mx-auto"><h2 class="font-headline text-3xl md:text-4xl font-bold mt-4 mb-4" data-translate-key="successStoriesTitle">Resultados que no se pueden fingir</h2><p class="text-lg text-muted-foreground" data-translate-key="successStoriesSubtext">Empresas reales. Cifras auditables. Tecnología propia.</p></div>
                     <div class="grid md:grid-cols-1 lg:grid-cols-3 gap-8">
-                        <div class="rounded-xl border bg-card text-card-foreground shadow-sm flex flex-col border-border hover:border-primary transition-all duration-300 p-8">
+                        <div class="rounded-xl border bg-card text-card-foreground shadow-sm flex flex-col border-border hover:border-primary transition-all duration-300 p-8 relative">
                             <div class="flex text-yellow-500 mb-4">★★★★★</div>
-                            <p class="text-muted-foreground flex-grow italic text-lg leading-relaxed" data-translate-key="testimonial1">"BoostifyPro instaló su software y en la primera semana recuperamos 120 leads perdidos. El ROI se pagó solo en 15 días."</p>
+                            <p class="text-muted-foreground flex-grow italic text-lg leading-relaxed" data-translate-key="testimonial1">"BoostifyPro instaló su software y en la primera semana recuperamos 120 leads perdidos. Fue como encender una máquina de imprimir dinero. El ROI se pagó solo en 15 días."</p>
                             <div class="mt-8 pt-6 border-t border-border flex items-center gap-4">
                                 <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100" alt="Javier Rojas" class="h-12 w-12 rounded-full object-cover border-2 border-primary/20">
-                                <div><p class="font-bold text-foreground text-base">Javier Rojas</p><p class="text-xs text-primary font-semibold uppercase tracking-wider">Gerente Ops, ModaClick</p></div>
+                                <div>
+                                    <p class="font-bold text-foreground text-base" data-translate-key="testimonial1Author">Javier Rojas</p>
+                                    <p class="text-xs text-primary font-semibold uppercase tracking-wider" data-translate-key="testimonial1Role">Gerente Ops, ModaClick</p>
+                                </div>
                             </div>
                         </div>
-                        <div class="rounded-xl border bg-card text-card-foreground shadow-sm flex flex-col border-border hover:border-primary transition-all duration-300 p-8 scale-105 z-10 shadow-2xl">
-                             <div class="absolute -top-3 right-8 bg-primary text-primary-foreground text-xs font-bold px-3 py-1 rounded-full">Caso Destacado</div>
+                        
+                        <div class="rounded-xl border bg-card text-card-foreground shadow-sm flex flex-col border-border hover:border-primary transition-all duration-300 p-8 relative scale-105 z-10 shadow-2xl shadow-primary/5">
+                            <div class="absolute -top-3 right-8 bg-primary text-primary-foreground text-xs font-bold px-3 py-1 rounded-full">Caso Destacado</div>
                             <div class="flex text-yellow-500 mb-4">★★★★★</div>
-                            <p class="text-muted-foreground flex-grow italic text-lg leading-relaxed" data-translate-key="testimonial2">"La solución híbrida de BoostifyPro (Consultor + Sistema) fue lo que realmente funcionó. Redujimos costos en un 35%."</p>
+                            <p class="text-muted-foreground flex-grow italic text-lg leading-relaxed" data-translate-key="testimonial2">"Intentamos usar ChatGPT internamente y fue un desastre. La solución híbrida de BoostifyPro (Consultor + Sistema) fue lo que realmente funcionó. Redujimos costos en un 35%."</p>
                             <div class="mt-8 pt-6 border-t border-border flex items-center gap-4">
                                 <img src="https://images.unsplash.com/photo-1573496359-0cf84flc527e?auto=format&fit=crop&w=100&h=100" alt="Sofía Morales" class="h-12 w-12 rounded-full object-cover border-2 border-primary/20">
-                                <div><p class="font-bold text-foreground text-base">Sofía Morales</p><p class="text-xs text-primary font-semibold uppercase tracking-wider">CFO, FinTech Rápido</p></div>
+                                <div>
+                                    <p class="font-bold text-foreground text-base" data-translate-key="testimonial2Author">Sofía Morales</p>
+                                    <p class="text-xs text-primary font-semibold uppercase tracking-wider" data-translate-key="testimonial2Role">CFO, FinTech Rápido</p>
+                                </div>
                             </div>
                         </div>
-                        <div class="rounded-xl border bg-card text-card-foreground shadow-sm flex flex-col border-border hover:border-primary transition-all duration-300 p-8">
+                        
+                        <div class="rounded-xl border bg-card text-card-foreground shadow-sm flex flex-col border-border hover:border-primary transition-all duration-300 p-8 relative">
                             <div class="flex text-yellow-500 mb-4">★★★★★</div>
-                            <p class="text-muted-foreground flex-grow italic text-lg leading-relaxed" data-translate-key="testimonial3">"La garantía me dio la confianza para firmar. 60 días después, habíamos duplicado la tasa de cierre. Alvaro es un crack."</p>
+                            <p class="text-muted-foreground flex-grow italic text-lg leading-relaxed" data-translate-key="testimonial3">"La garantía me dio la confianza para firmar. 60 días después, habíamos duplicado la tasa de cierre sin contratar más vendedores. Alvaro es un crack."</p>
                             <div class="mt-8 pt-6 border-t border-border flex items-center gap-4">
                                 <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=100&h=100" alt="Andrés Peña" class="h-12 w-12 rounded-full object-cover border-2 border-primary/20">
-                                <div><p class="font-bold text-foreground text-base">Andrés Peña</p><p class="text-xs text-primary font-semibold uppercase tracking-wider">CEO, Café Origen</p></div>
+                                <div>
+                                    <p class="font-bold text-foreground text-base" data-translate-key="testimonial3Author">Andrés Peña</p>
+                                    <p class="text-xs text-primary font-semibold uppercase tracking-wider" data-translate-key="testimonial3Role">CEO, Café Origen</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -346,11 +375,17 @@
                                     <h4 class="font-semibold text-lg" data-translate-key="faqQ4">¿Están seguros los datos de mi empresa?</h4>
                                     <svg class="w-6 h-6 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                                 </button>
-                                <div class="faq-answer hidden mt-4 pl-2 text-muted-foreground"><p data-translate-key="faqA4">Seguridad grado Enterprise. No usamos tus datos para modelos públicos. Todo opera en entornos aislados.</p></div>
+                                <div class="faq-answer hidden mt-4 pl-2 text-muted-foreground"><p data-translate-key="faqA4">Seguridad grado Enterprise. No utilizamos tus datos para entrenar modelos públicos. Todo opera en entornos aislados.</p></div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question w-full text-left flex justify-between items-center p-2 rounded-lg hover:bg-secondary/50">
+                                    <h4 class="font-semibold text-lg" data-translate-key="faqQ5">¿Esto reemplaza a mis empleados actuales?</h4>
+                                    <svg class="w-6 h-6 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                </button>
+                                <div class="faq-answer hidden mt-4 pl-2 text-muted-foreground"><p data-translate-key="faqA5">No, los potencia. La IA se encarga del trabajo "robot" para que tu equipo humano se enfoque en cerrar tratos y crear estrategia.</p></div>
                             </div>
                         </div>
                     </div>
-                    
                     <div class="max-w-3xl mx-auto text-center border-t border-border pt-16">
                         <div class="flex flex-col sm:flex-row justify-center items-center gap-6">
                             <a href="mailto:sales@boostify-pro.com" class="flex items-center gap-3 p-4 rounded-lg bg-card border border-border hover:border-primary transition-colors">
@@ -492,6 +527,8 @@
                 faqA2: "Totalmente. Si no logramos resultados, te devolvemos tu inversión y te pagamos $500 USD.",
                 faqQ4: "¿Están seguros los datos de mi empresa?",
                 faqA4: "Seguridad grado Enterprise. No usamos tus datos para modelos públicos.",
+                faqQ5: "¿Esto reemplaza a mis empleados actuales?",
+                faqA5: "No, los potencia. La IA se encarga del trabajo 'robot' para que tu equipo humano se enfoque en cerrar tratos.",
                 aiAssistantTitle: "Soporte BoostifyOS",
                 aiAssistantWelcome: "¡Hola! ¿Quieres saber cómo escalar a +$50k/mes? Escribe tu duda y te conectaré con un especialista humano al instante.",
                 aiAssistantResponse: "Redirigiendo a WhatsApp para atención prioritaria..."
@@ -567,6 +604,8 @@
                 faqA2: "Absolutely. If we don't achieve results, we refund your investment and pay you $500 USD.",
                 faqQ4: "Is my company data safe?",
                 faqA4: "Enterprise-grade security. We don't use your data for public models.",
+                faqQ5: "Does this replace my current employees?",
+                faqA5: "No, it empowers them. AI handles the 'robotic' work so your human team can focus on closing deals.",
                 aiAssistantTitle: "BoostifyOS Support",
                 aiAssistantWelcome: "Hello! Want to know how to scale to +$50k/mo? Type your question and I'll connect you with a human specialist instantly.",
                 aiAssistantResponse: "Redirecting to WhatsApp for priority support..."
