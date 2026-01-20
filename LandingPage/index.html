@@ -32,9 +32,6 @@
                     fontFamily: {
                         headline: ['Space Grotesk', 'sans-serif'],
                         body: ['Inter', 'sans-serif'],
-                    },
-                    animation: {
-                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
                     }
                 }
             }
@@ -49,32 +46,24 @@
             font-family: 'Space Grotesk', sans-serif;
         }
         .btn-glow:hover {
-            box-shadow: 0 0 25px rgba(212, 175, 55, 0.6);
-        }
-        .coupon-border {
-            border: 1px dashed #D4AF37;
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
         }
     </style>
 </head>
 <body class="font-body bg-background text-foreground antialiased">
-    
-    <div class="bg-primary text-primary-foreground text-center py-2 px-4 text-xs md:text-sm font-bold tracking-wide relative z-50">
-        <span class="animate-pulse">🔥 SOLO 3 CUPOS:</span> Usa el código <span class="bg-black/20 px-2 py-0.5 rounded mx-1 font-mono">BOOST2026</span> para <span class="underline">$1,000 USD DE DESCUENTO</span> en tu implementación.
-    </div>
-
     <div class="flex flex-col min-h-screen">
-        <header class="fixed top-8 left-0 right-0 z-40 transition-all duration-300 bg-transparent">
+        <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent">
             <div class="container mx-auto px-4">
                 <div class="flex justify-between items-center h-20">
                     <a class="flex items-center gap-3" href="#">
                         <div class="bg-background/80 p-1.5 rounded-lg overflow-hidden border border-border">
-                            <div class="h-10 w-10 bg-gradient-to-br from-primary to-yellow-600 rounded flex items-center justify-center font-bold text-black">B</div>
+                            <img src="./BoostifyPro 13 cuadrada.png" alt="BoostifyPro Logo" class="h-10 w-10 object-cover rounded-lg">
                         </div>
                         <span class="font-headline text-xl font-bold hidden sm:inline-block">BoostifyPro</span>
                     </a>
                     <nav class="hidden md:flex items-center gap-6">
                         <a class="text-sm font-medium text-muted-foreground hover:text-primary transition-colors" href="#process" data-translate-key="process">Método</a>
-                        <a class="text-sm font-medium text-muted-foreground hover:text-primary transition-colors" href="#pricing" data-translate-key="plans">Planes</a>
+                        <a class="text-sm font-medium text-muted-foreground hover:text-primary transition-colors" href="#pricing" data-translate-key="plans">Planes 2026</a>
                         <a class="text-sm font-medium text-muted-foreground hover:text-primary transition-colors" href="#casos-de-exito" data-translate-key="successStories">Resultados</a>
                         <a class="text-sm font-medium text-muted-foreground hover:text-primary transition-colors" href="#guarantee" data-translate-key="guarantee">Garantía</a>
                     </nav>
@@ -91,7 +80,7 @@
                                 <button class="block w-full text-left px-4 py-2 text-sm text-foreground hover:bg-secondary" data-lang="en">English</button>
                             </div>
                         </div>
-                        <a href="#pricing" class="hidden sm:inline-flex items-center justify-center whitespace-nowrap text-sm font-bold bg-primary text-primary-foreground hover:bg-primary/90 h-9 rounded-md px-4 group shadow-lg shadow-primary/20 btn-glow transition-all" data-translate-key="viewPlans">Reclamar Oferta</a>
+                        <a href="#pricing" class="hidden sm:inline-flex items-center justify-center whitespace-nowrap text-sm font-bold bg-primary text-primary-foreground hover:bg-primary/90 h-9 rounded-md px-4 group shadow-lg shadow-primary/20 btn-glow transition-all" data-translate-key="viewPlans">Consultar Programa</a>
                     </div>
                 </div>
             </div>
@@ -102,25 +91,24 @@
                 <div class="absolute pointer-events-none inset-0 flex items-center justify-center bg-background [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
                 <div class="container mx-auto px-4 z-10 relative">
                     <div class="inline-block mb-4 px-3 py-1 rounded-full border border-primary/30 bg-primary/10 text-primary text-xs font-bold tracking-wider uppercase animate-pulse">
-                        <span data-translate-key="heroBadge">Cupón de Descuento Activo</span>
+                        <span data-translate-key="heroBadge">Nueva Estrategia 2026</span>
                     </div>
                     <h1 class="font-headline text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight max-w-5xl mx-auto tracking-tight" data-translate-key="heroHeadline">
                         ¿Tu empresa en 2026? <br> <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-yellow-200">Operada por IA</span> o devorada por quien sí la usa.
                     </h1>
                     <p class="text-xl md:text-2xl font-light mb-10 text-muted-foreground max-w-3xl mx-auto" data-translate-key="heroSubheadline">
-                        Implementamos <strong>Sistemas de Crecimiento Híbrido</strong>. Factura +$50k/mes extra antes de marzo o te pagamos por haberte hecho perder el tiempo.
+                        Implementamos <strong>Sistemas de Crecimiento Híbrido</strong> (Consultoría + Nuestro SaaS) para empresas que buscan facturar +$50k/mes extra antes de marzo.
                     </p>
                     
                     <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
                         <a href="#pricing" class="w-full sm:w-auto inline-flex items-center justify-center whitespace-nowrap text-base font-bold bg-primary text-primary-foreground hover:bg-primary/90 h-12 rounded-md px-8 group btn-glow transition-all" data-translate-key="heroCta">
-                            Aplicar al Descuento ($1,000 OFF)
+                            Ver si mi empresa califica
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
                         </a>
                         <a href="#casos-de-exito" class="w-full sm:w-auto inline-flex items-center justify-center whitespace-nowrap text-base font-medium text-foreground border border-border hover:bg-secondary h-12 rounded-md px-8 transition-all" data-translate-key="heroSecondaryCta">
                             Ver Evidencia
                         </a>
                     </div>
-                    <p class="mt-4 text-xs text-muted-foreground opactiy-70">*Garantía de Satisfacción Blindada incluida en todos los planes.</p>
                 </div>
             </section>
 
@@ -181,13 +169,11 @@
 
                 <div class="container mx-auto px-4 relative z-10">
                     <div class="text-center max-w-4xl mx-auto mb-16">
-                        <h2 class="font-headline text-4xl md:text-5xl font-bold mb-6" data-translate-key="pricingTitle">Invierte con Certeza.</h2>
-                        <p class="text-xl text-muted-foreground mb-8" data-translate-key="pricingSubtext">Elige la velocidad a la que quieres escalar. Precios subvencionados para casos de estudio.</p>
+                        <h2 class="font-headline text-4xl md:text-5xl font-bold mb-6" data-translate-key="pricingTitle">Invierte en certeza.</h2>
+                        <p class="text-xl text-muted-foreground mb-8" data-translate-key="pricingSubtext">Programas diseñados para escalar. Consulta si aplicas a nuestro subsidio por casos de éxito.</p>
                         
-                        <div class="inline-block bg-gradient-to-r from-primary/20 to-primary/5 border border-primary text-primary-foreground p-4 rounded-xl shadow-[0_0_30px_rgba(212,175,55,0.15)] mb-8 animate-pulse-slow">
-                            <p class="text-lg font-bold text-primary">
-                                🎟️ CUPÓN ACTIVADO: Se aplicará un descuento automático de $1,000 USD al seleccionar tu plan.
-                            </p>
+                        <div class="inline-block bg-gradient-to-r from-primary/20 to-primary/5 border border-primary text-primary-foreground p-4 rounded-xl shadow-[0_0_30px_rgba(212,175,55,0.15)] mb-8 animate-pulse">
+                            <p class="text-lg font-bold text-primary" data-translate-key="septemberBonus">🚀 KICK-OFF 2026: Cupón de $1,000 USD disponible para empresas calificadas.</p>
                         </div>
                     </div>
 
@@ -197,58 +183,53 @@
                             <div class="p-8 pb-4">
                                 <h3 class="font-headline text-2xl font-bold" data-translate-key="plan1Name">IA Despegue</h3>
                                 <p class="text-sm text-primary font-semibold mt-1" data-translate-key="plan1Tag">Para empezar rápido</p>
-                                
-                                <div class="mt-4">
-                                    <div class="text-sm text-muted-foreground line-through mb-1">Antes: $2,000 USD</div>
-                                    <div class="flex items-baseline text-5xl font-bold text-white">
-                                        <span class="text-3xl mr-1">Desde</span> $1,000<span class="text-lg font-normal text-muted-foreground ml-1">*</span>
+                                <div class="mt-4 flex flex-col">
+                                    <div class="flex items-baseline text-4xl font-bold">
+                                        Desde $1,000 <span class="text-xl font-normal text-muted-foreground ml-2">USD*</span>
                                     </div>
-                                    <div class="text-xs text-green-500 font-bold mt-2 bg-green-500/10 inline-block px-2 py-1 rounded">
-                                        ✓ Cupón -$1,000 Aplicado
-                                    </div>
+                                    <p class="text-xs text-primary/80 mt-1 font-semibold">*Precio incluye cupón de descuento aplicado.</p>
                                 </div>
-                                
+                                <p class="text-xs text-muted-foreground mt-2" data-translate-key="plan1Installments">Consultar facilidades de pago.</p>
                             </div>
                             <div class="px-8 pb-8 flex-grow flex flex-col">
                                 <ul class="space-y-4 text-sm text-muted-foreground mb-8 flex-grow">
                                     <li class="flex items-start gap-3"><span class="text-green-500">✓</span> <span data-translate-key="plan1Feature1">Diagnóstico Estratégico Express.</span></li>
                                     <li class="flex items-start gap-3"><span class="text-green-500">✓</span> <strong class="text-foreground" data-translate-key="plan1SaaS">Licencia Anual BoostifyOS Lite.</strong></li>
                                     <li class="flex items-start gap-3"><span class="text-green-500">✓</span> <span data-translate-key="plan1Feature2">1 Agente IA de Calificación (Ventas).</span></li>
+                                    <li class="flex items-start gap-3"><span class="text-green-500">✓</span> <span data-translate-key="plan1Feature3">Automatización de 2 Procesos Clave.</span></li>
                                 </ul>
                                 <a href="https://calendly.com/boostifypro-clients/30min" class="w-full inline-flex items-center justify-center whitespace-nowrap text-sm font-bold bg-secondary text-foreground border border-border hover:bg-foreground hover:text-background h-12 rounded-lg transition-colors" data-translate-key="plan1Cta">
-                                    Reclamar Oferta
+                                    Agendar Entrevista
                                 </a>
+                                <p class="text-center text-xs text-muted-foreground mt-3">¿Dudas? <a href="https://calendly.com/boostifypro-clients/30min" class="underline hover:text-primary">Agenda Demo 15 min</a></p>
                             </div>
                         </div>
 
                         <div class="rounded-xl bg-card text-card-foreground shadow-2xl shadow-primary/10 flex flex-col border-2 border-primary relative scale-105 z-10">
-                            <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground px-4 py-1 rounded-full text-sm font-bold shadow-lg" data-translate-key="plan2Badge">RECOMENDADO</div>
+                            <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground px-4 py-1 rounded-full text-sm font-bold shadow-lg" data-translate-key="plan2Badge">MÁS VENDIDO 2025</div>
                             <div class="p-8 pb-4">
                                 <h3 class="font-headline text-2xl font-bold" data-translate-key="plan2Name">IA Aceleración</h3>
                                 <p class="text-sm text-primary font-semibold mt-1" data-translate-key="plan2Tag">El sistema híbrido completo</p>
-                                
-                                <div class="mt-4">
-                                    <div class="text-sm text-muted-foreground line-through mb-1">Antes: $2,500 USD</div>
-                                    <div class="flex items-baseline text-5xl font-bold text-primary">
-                                        <span class="text-3xl mr-1 text-foreground">Desde</span> $1,500<span class="text-lg font-normal text-muted-foreground ml-1">*</span>
+                                <div class="mt-4 flex flex-col">
+                                    <div class="flex items-baseline text-4xl font-bold">
+                                        Desde $1,500 <span class="text-xl font-normal text-muted-foreground ml-2">USD*</span>
                                     </div>
-                                    <div class="text-xs text-primary font-bold mt-2 bg-primary/20 inline-block px-2 py-1 rounded border border-primary/30">
-                                        ✓ Cupón -$1,000 Aplicado
-                                    </div>
+                                    <p class="text-xs text-primary/80 mt-1 font-semibold">*Precio incluye cupón de descuento aplicado.</p>
                                 </div>
-                                <p class="text-xs text-muted-foreground mt-2" data-translate-key="plan2Installments">Facilidades de pago disponibles.</p>
+                                <p class="text-xs text-muted-foreground mt-2" data-translate-key="plan2Installments">3 cuotas disponibles bajo evaluación.</p>
                             </div>
                             <div class="px-8 pb-8 flex-grow flex flex-col">
                                 <ul class="space-y-4 text-sm text-muted-foreground mb-8 flex-grow">
                                     <li class="flex items-start gap-3"><span class="text-primary">★</span> <span class="font-bold text-foreground" data-translate-key="plan2Feature1">Todo lo del plan Despegue, más:</span></li>
                                     <li class="flex items-start gap-3"><span class="text-green-500">✓</span> <strong class="text-primary" data-translate-key="plan2SaaS">Licencia PRO BoostifyOS + Configuración.</strong></li>
-                                    <li class="flex items-start gap-3"><span class="text-green-500">✓</span> <span data-translate-key="plan2Feature2">3 Sistemas de IA interconectados.</span></li>
-                                    <li class="flex items-start gap-3"><span class="text-green-500">✓</span> <span class="text-foreground font-bold border-b border-primary/50">Garantía Anti-Riesgo (+$500).</span></li>
+                                    <li class="flex items-start gap-3"><span class="text-green-500">✓</span> <span data-translate-key="plan2Feature2">3 Sistemas de IA interconectados (Ventas + Ops).</span></li>
+                                    <li class="flex items-start gap-3"><span class="text-green-500">✓</span> <span data-translate-key="plan2Feature3">Sistema de Prospección Outbound Automático.</span></li>
+                                    <li class="flex items-start gap-3"><span class="text-green-500">✓</span> <span data-translate-key="plan2Feature4">Integración Nativa CRM (HubSpot/Salesforce).</span></li>
                                 </ul>
                                 <a href="https://calendly.com/boostifypro-clients/30min" class="w-full inline-flex items-center justify-center whitespace-nowrap text-sm font-bold bg-primary text-primary-foreground hover:bg-primary/90 h-12 rounded-lg btn-glow transition-all" data-translate-key="plan2Cta">
-                                    Reclamar Cupón y Agendar
+                                    Aplicar para Acceso PRO
                                 </a>
-                                <p class="text-center text-xs text-muted-foreground/60 mt-3" data-translate-key="plan2Subtext">Solo 5 cupos con descuento.</p>
+                                <p class="text-center text-xs text-muted-foreground/60 mt-3" data-translate-key="plan2Subtext">Solo 5 cupos nuevos por mes.</p>
                             </div>
                         </div>
 
@@ -257,15 +238,16 @@
                                 <h3 class="font-headline text-2xl font-bold" data-translate-key="plan3Name">Partner Estratégico</h3>
                                 <p class="text-sm text-primary font-semibold mt-1" data-translate-key="plan3Tag">Para líderes de mercado</p>
                                 <div class="mt-4 flex items-baseline text-4xl font-bold" data-translate-key="plan3Price">
-                                    Consultar
+                                    A Medida
                                 </div>
                                 <p class="text-xs text-muted-foreground mt-2" data-translate-key="plan3Subprice">Consultoría + Revenue Share</p>
                             </div>
                             <div class="px-8 pb-8 flex-grow flex flex-col">
                                 <ul class="space-y-4 text-sm text-muted-foreground mb-8 flex-grow">
                                     <li class="flex items-start gap-3"><span class="text-green-500">✓</span> <span data-translate-key="plan3Feature1">Equipo de Ingeniería IA dedicado.</span></li>
-                                    <li class="flex items-start gap-3"><span class="text-green-500">✓</span> <span data-translate-key="plan3Feature2">LLMs Fine-tuned.</span></li>
-                                    <li class="flex items-start gap-3"><span class="text-green-500">✓</span> <span data-translate-key="plan3Feature5">Acceso al "Círculo de Líderes".</span></li>
+                                    <li class="flex items-start gap-3"><span class="text-green-500">✓</span> <span data-translate-key="plan3Feature2">Desarrollo de Modelos Propios (LLMs Fine-tuned).</span></li>
+                                    <li class="flex items-start gap-3"><span class="text-green-500">✓</span> <span data-translate-key="plan3Feature3">Analítica Predictiva avanzada.</span></li>
+                                    <li class="flex items-start gap-3"><span class="text-green-500">✓</span> <span data-translate-key="plan3Feature5">Acceso al "Círculo de Líderes" (Networking).</span></li>
                                 </ul>
                                 <a href="https://calendly.com/boostifypro-clients/30min" class="w-full inline-flex items-center justify-center whitespace-nowrap text-sm font-bold bg-secondary text-foreground border border-border hover:bg-foreground hover:text-background h-12 rounded-lg transition-colors" data-translate-key="plan3Cta">
                                     Agendar Reunión Socios
@@ -276,24 +258,20 @@
                 </div>
             </section>
 
-            <section id="guarantee" class="py-20 bg-black">
-                <div class="container mx-auto px-4 max-w-5xl text-center border-2 border-primary/50 bg-[#0F0F0F] rounded-2xl p-8 md:p-16 relative overflow-hidden shadow-[0_0_50px_rgba(212,175,55,0.1)]">
-                    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-5 pointer-events-none">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 24 24" fill="currentColor" class="text-primary"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"></path></svg>
+            <section id="guarantee" class="py-20 bg-secondary/20">
+                <div class="container mx-auto px-4 max-w-4xl text-center border border-primary/20 bg-background/50 rounded-2xl p-8 md:p-12 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 p-4 opacity-10">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" class="text-primary"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"></path></svg>
                     </div>
                     
-                    <div class="relative z-10">
-                        <h2 class="font-headline text-3xl md:text-5xl font-bold mb-6 text-white" data-translate-key="guaranteeTitle">Garantía de "Inversión Blindada"</h2>
-                        <p class="text-xl text-gray-300 mb-8 leading-relaxed max-w-3xl mx-auto" data-translate-key="guaranteeDescription">
-                            Eliminamos tu riesgo al 100%. Si tras implementar nuestro sistema durante 90 días no generas un <strong>ROI positivo</strong>, te devolvemos cada centavo de tu dinero.
+                    <h2 class="font-headline text-3xl md:text-4xl font-bold mb-6 text-foreground" data-translate-key="guaranteeTitle">Garantía de Blindaje Total</h2>
+                    <p class="text-lg text-muted-foreground mb-8 leading-relaxed" data-translate-key="guaranteeDescription">
+                        Eliminamos tu riesgo. Si tras implementar nuestro sistema y usar nuestro software durante 90 días no generas un <strong>ROI positivo medible</strong>, te devolvemos el <strong>100% de tu dinero</strong>.
+                    </p>
+                    <div class="bg-primary/10 border border-primary/30 p-4 rounded-lg inline-block">
+                        <p class="font-bold text-primary" data-translate-key="guaranteeBold">
+                            + Te pagamos $500 USD adicionales por haberte hecho perder el tiempo.
                         </p>
-                        
-                        <div class="bg-primary/10 border-2 border-primary p-6 rounded-xl inline-block transform hover:scale-105 transition-transform duration-300">
-                            <p class="font-bold text-2xl text-primary" data-translate-key="guaranteeBold">
-                                🛡️ Y TE PAGAMOS $500 USD EXTRA
-                            </p>
-                            <p class="text-sm text-primary/80 mt-2">Por haberte hecho perder el tiempo. Sin letra chica.</p>
-                        </div>
                     </div>
                 </div>
             </section>
@@ -384,7 +362,43 @@
                                     <p data-translate-key="faqA2">Totalmente. Estamos tan seguros de nuestra metodología que si no logramos resultados positivos en 90 días, te devolvemos tu inversión íntegra y te pagamos $500 USD por las molestias. Todo queda firmado en contrato.</p>
                                 </div>
                             </div>
+                            <div class="faq-item border-b border-border pb-4">
+                                <button class="faq-question w-full text-left flex justify-between items-center p-2 rounded-lg hover:bg-secondary/50">
+                                    <h4 class="font-semibold text-lg" data-translate-key="faqQ3">¿Necesito equipo técnico para usar BoostifyOS?</h4>
+                                    <svg class="w-6 h-6 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                </button>
+                                <div class="faq-answer hidden mt-4 pl-2 text-muted-foreground">
+                                    <p data-translate-key="faqA3">No. En los planes "Despegue" y "Aceleración", nosotros nos encargamos de la configuración inicial y la integración. Tu equipo solo tiene que atender los leads y cerrar las ventas.</p>
+                                </div>
                             </div>
+                            <div class="faq-item border-b border-border pb-4">
+                                <button class="faq-question w-full text-left flex justify-between items-center p-2 rounded-lg hover:bg-secondary/50">
+                                    <h4 class="font-semibold text-lg" data-translate-key="faqQ4">¿Están seguros los datos de mi empresa?</h4>
+                                    <svg class="w-6 h-6 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                </button>
+                                <div class="faq-answer hidden mt-4 pl-2 text-muted-foreground">
+                                    <p data-translate-key="faqA4">Seguridad grado Enterprise. No utilizamos tus datos para entrenar modelos públicos (como hace ChatGPT gratuito). Todo opera en entornos aislados y cumplimos con los estándares de privacidad más estrictos.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item border-b border-border pb-4">
+                                <button class="faq-question w-full text-left flex justify-between items-center p-2 rounded-lg hover:bg-secondary/50">
+                                    <h4 class="font-semibold text-lg" data-translate-key="faqQ5">¿Esto reemplaza a mis empleados actuales?</h4>
+                                    <svg class="w-6 h-6 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                </button>
+                                <div class="faq-answer hidden mt-4 pl-2 text-muted-foreground">
+                                    <p data-translate-key="faqA5">No, los potencia. La IA se encarga del trabajo "robot" (calificar leads, llenar excels, responder dudas repetitivas) para que tu equipo humano se enfoque en cerrar tratos y crear estrategia. Tus empleados amarán no tener que hacer tareas aburridas.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question w-full text-left flex justify-between items-center p-2 rounded-lg hover:bg-secondary/50">
+                                    <h4 class="font-semibold text-lg" data-translate-key="faqQ6">Mi negocio es muy específico, ¿servirá BoostifyOS?</h4>
+                                    <svg class="w-6 h-6 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                </button>
+                                <div class="faq-answer hidden mt-4 pl-2 text-muted-foreground">
+                                    <p data-translate-key="faqA6">El 80% de los procesos B2B (ventas, soporte, operaciones) son universales. El 20% restante lo personalizamos durante la fase de "Aceleración". Si tu empresa factura +$10k/mes, nuestro sistema se adapta a tu flujo, no al revés.</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="max-w-3xl mx-auto text-center border-t border-border pt-16">
@@ -413,7 +427,7 @@
                     <div class="flex flex-col items-center gap-6">
                         <a class="flex items-center gap-3" href="#">
                             <div class="bg-background/80 p-1.5 rounded-lg overflow-hidden">
-                                <div class="h-16 w-16 bg-gradient-to-br from-primary to-yellow-600 rounded flex items-center justify-center font-bold text-black text-2xl">B</div>
+                                <img src="./BoostifyPro 13 cuadrada.png" alt="BoostifyPro Logo" class="h-16 w-16 object-cover rounded-lg">
                             </div>
                         </a>
                         <div class="text-center">
@@ -441,7 +455,7 @@
             <div id="ai-chat-messages" class="flex-1 p-3 overflow-y-auto space-y-2">
                 <div class="flex justify-start">
                     <div class="bg-secondary text-foreground p-2 rounded-lg max-w-[80%] text-sm" data-translate-key="aiAssistantWelcome">
-                        ¡Hola! ¿Quieres saber cómo canjear tu cupón de $1,000 USD? Escribe tu duda.
+                        ¡Hola! ¿Quieres saber cómo escalar a +$50k/mes? Escribe tu duda y te conectaré con un especialista humano al instante.
                     </div>
                 </div>
             </div>
@@ -464,19 +478,20 @@
             }
         });
 
-        // TRADUCCIONES ACTUALIZADAS CON NUEVA LÓGICA DE PRECIOS Y GARANTÍA
+        // NUEVAS TRADUCCIONES ACTUALIZADAS 2026 (INCLUYENDO FAQs Y CHATBOT)
         const translations = {
             es: {
-                viewPlans: "Reclamar Oferta",
+                viewPlans: "Consultar Programa",
                 process: "Método",
-                plans: "Planes",
+                plans: "Planes 2026",
                 successStories: "Resultados",
                 guarantee: "Garantía",
-                heroBadge: "Cupón de Descuento Activo",
+                heroBadge: "Nueva Estrategia 2026",
                 heroHeadline: "¿Tu empresa en 2026? <br> <span class='text-transparent bg-clip-text bg-gradient-to-r from-primary to-yellow-200'>Operada por IA</span> o devorada por quien sí la usa.",
-                heroSubheadline: "Implementamos <strong>Sistemas de Crecimiento Híbrido</strong>. Factura +$50k/mes extra antes de marzo o te pagamos por haberte hecho perder el tiempo.",
-                heroCta: "Aplicar al Descuento ($1,000 OFF)",
+                heroSubheadline: "Implementamos <strong>Sistemas de Crecimiento Híbrido</strong> (Consultoría + Nuestro SaaS) para empresas que buscan facturar +$50k/mes extra antes de marzo.",
+                heroCta: "Ver si mi empresa califica",
                 heroSecondaryCta: "Ver Evidencia",
+                poweredBy: "Potenciado por la tecnología de:",
                 familiarQuestion: "La dura realidad del 2026",
                 familiarSubtext: "Lo que funcionaba en 2024 ya es obsoleto. Si sigues dependiendo 100% de humanos para tareas repetitivas, estás perdiendo dinero cada hora.",
                 leadsLeakageTitle: "Ventas que se escapan",
@@ -493,34 +508,40 @@
                 step2Description: "Desplegamos nuestros agentes de IA propietarios en tu infraestructura. Ventas, soporte y operaciones automatizadas en días, no meses.",
                 step3Title: "Optimización Continua",
                 step3Description: "No te dejamos solo. Monitoreamos el rendimiento, ajustamos los modelos y garantizamos el ROI positivo.",
-                pricingTitle: "Invierte con Certeza.",
-                pricingSubtext: "Elige la velocidad a la que quieres escalar. Precios subvencionados para casos de estudio.",
+                pricingTitle: "Invierte en certeza.",
+                pricingSubtext: "Programas diseñados para escalar. Consulta si aplicas a nuestro subsidio por casos de éxito.",
+                septemberBonus: "🚀 KICK-OFF 2026: Cupón de $1,000 USD disponible para empresas calificadas.",
                 plan1Name: "IA Despegue",
                 plan1Tag: "Para empezar rápido",
+                plan1Installments: "Consultar facilidades de pago.",
                 plan1Feature1: "Diagnóstico Estratégico Express.",
                 plan1SaaS: "Licencia Anual BoostifyOS Lite.",
                 plan1Feature2: "1 Agente IA de Calificación (Ventas).",
-                plan1Cta: "Reclamar Oferta",
-                plan2Badge: "RECOMENDADO",
+                plan1Feature3: "Automatización de 2 Procesos Clave.",
+                plan1Cta: "Agendar Entrevista",
+                plan2Badge: "MÁS VENDIDO 2025",
                 plan2Name: "IA Aceleración",
                 plan2Tag: "El sistema híbrido completo",
-                plan2Installments: "Facilidades de pago disponibles.",
+                plan2Installments: "3 cuotas disponibles bajo evaluación.",
                 plan2Feature1: "Todo lo del plan Despegue, más:",
                 plan2SaaS: "Licencia PRO BoostifyOS + Configuración.",
-                plan2Feature2: "3 Sistemas de IA interconectados.",
-                plan2Cta: "Reclamar Cupón y Agendar",
-                plan2Subtext: "Solo 5 cupos con descuento.",
+                plan2Feature2: "3 Sistemas de IA interconectados (Ventas + Ops).",
+                plan2Feature3: "Sistema de Prospección Outbound Automático.",
+                plan2Feature4: "Integración Nativa CRM (HubSpot/Salesforce).",
+                plan2Cta: "Aplicar para Acceso PRO",
+                plan2Subtext: "Solo 5 cupos nuevos por mes.",
                 plan3Name: "Partner Estratégico",
                 plan3Tag: "Para líderes de mercado",
-                plan3Price: "Consultar",
+                plan3Price: "A Medida",
                 plan3Subprice: "Consultoría + Revenue Share",
                 plan3Feature1: "Equipo de Ingeniería IA dedicado.",
-                plan3Feature2: "LLMs Fine-tuned.",
-                plan3Feature5: "Acceso al 'Círculo de Líderes'.",
+                plan3Feature2: "Desarrollo de Modelos Propios (LLMs Fine-tuned).",
+                plan3Feature3: "Analítica Predictiva avanzada.",
+                plan3Feature5: "Acceso al 'Círculo de Líderes' (Networking).",
                 plan3Cta: "Agendar Reunión Socios",
-                guaranteeTitle: "Garantía de 'Inversión Blindada'",
-                guaranteeDescription: "Eliminamos tu riesgo al 100%. Si tras implementar nuestro sistema durante 90 días no generas un <strong>ROI positivo</strong>, te devolvemos cada centavo de tu dinero.",
-                guaranteeBold: "🛡️ Y TE PAGAMOS $500 USD EXTRA",
+                guaranteeTitle: "Garantía de Blindaje Total",
+                guaranteeDescription: "Eliminamos tu riesgo. Si tras implementar nuestro sistema y usar nuestro software durante 90 días no generas un <strong>ROI positivo medible</strong>, te devolvemos el <strong>100% de tu dinero</strong>.",
+                guaranteeBold: "+ Te pagamos $500 USD adicionales por haberte hecho perder el tiempo.",
                 successStoriesTitle: "Resultados que no se pueden fingir",
                 successStoriesSubtext: "Empresas reales. Cifras auditables. Tecnología propia.",
                 testimonial1: "\"BoostifyPro instaló su software y en la primera semana recuperamos 120 leads perdidos. Fue como encender una máquina de imprimir dinero. El ROI se pagó solo en 15 días.\"",
@@ -536,26 +557,38 @@
                 metric2: "Promedio Implementación",
                 metric3: "Tasa de Retención",
                 metric4: "Soporte IA Activo",
+                readyToLeadTitle: "2026 será de quienes actúen rápido",
+                readyToLeadDescription: "Tienes dos opciones: Seguir adivinando o implementar un sistema probado con garantía de resultados.",
+                readyToLeadCta: "Quiero mi Sistema IA",
                 faqTitle: "Preguntas Frecuentes",
                 faqQ1: "¿Qué es la 'Consultoría Híbrida'?",
                 faqA1: "Es nuestro modelo único. A diferencia de agencias tradicionales, no solo te asesoramos; te damos licencias de nuestro software propietario (BoostifyOS) para que tengas la tecnología funcionando desde el día 1, sin desarrollar nada desde cero.",
                 faqQ2: "¿Es real la garantía de +$500 USD?",
                 faqA2: "Totalmente. Estamos tan seguros de nuestra metodología que si no logramos resultados positivos en 90 días, te devolvemos tu inversión íntegra y te pagamos $500 USD por las molestias. Todo queda firmado en contrato.",
+                faqQ3: "¿Necesito equipo técnico para usar BoostifyOS?",
+                faqA3: "No. En los planes 'Despegue' y 'Aceleración', nosotros nos encargamos de la configuración inicial y la integración. Tu equipo solo tiene que atender los leads y cerrar las ventas.",
+                faqQ4: "¿Están seguros los datos de mi empresa?",
+                faqA4: "Seguridad grado Enterprise. No utilizamos tus datos para entrenar modelos públicos (como hace ChatGPT gratuito). Todo opera en entornos aislados y cumplimos con los estándares de privacidad más estrictos.",
+                faqQ5: "¿Esto reemplaza a mis empleados actuales?",
+                faqA5: "No, los potencia. La IA se encarga del trabajo 'robot' (calificar leads, llenar excels, responder dudas repetitivas) para que tu equipo humano se enfoque en cerrar tratos y crear estrategia. Tus empleados amarán no tener que hacer tareas aburridas.",
+                faqQ6: "Mi negocio es muy específico, ¿servirá BoostifyOS?",
+                faqA6: "El 80% de los procesos B2B (ventas, soporte, operaciones) son universales. El 20% restante lo personalizamos durante la fase de 'Aceleración'. Si tu empresa factura +$10k/mes, nuestro sistema se adapta a tu flujo, no al revés.",
                 aiAssistantTitle: "Soporte BoostifyOS",
-                aiAssistantWelcome: "¡Hola! ¿Quieres saber cómo canjear tu cupón de $1,000 USD? Escribe tu duda.",
-                aiAssistantResponse: "Redirigiendo a WhatsApp para reclamar cupón..."
+                aiAssistantWelcome: "¡Hola! ¿Quieres saber cómo escalar a +$50k/mes? Escribe tu duda y te conectaré con un especialista humano al instante.",
+                aiAssistantResponse: "Redirigiendo a WhatsApp para atención prioritaria..."
             },
             en: {
-                viewPlans: "Claim Offer",
+                viewPlans: "Consult Program",
                 process: "Method",
-                plans: "Plans",
+                plans: "2026 Plans",
                 successStories: "Results",
                 guarantee: "Guarantee",
-                heroBadge: "Discount Coupon Active",
+                heroBadge: "New 2026 Strategy",
                 heroHeadline: "Your company in 2026? <br> <span class='text-transparent bg-clip-text bg-gradient-to-r from-primary to-yellow-200'>Operated by AI</span> or devoured by those who use it.",
-                heroSubheadline: "We implement <strong>Hybrid Growth Systems</strong>. Bill +$50k/month extra before March or we pay you for wasting your time.",
-                heroCta: "Apply for Discount ($1,000 OFF)",
+                heroSubheadline: "We implement <strong>Hybrid Growth Systems</strong> (Consulting + Our SaaS) for companies looking to bill +$50k/month extra before March.",
+                heroCta: "Check if my company qualifies",
                 heroSecondaryCta: "See Evidence",
+                poweredBy: "Powered by the technology of:",
                 familiarQuestion: "The Harsh Reality of 2026",
                 familiarSubtext: "What worked in 2024 is now obsolete. If you still depend 100% on humans for repetitive tasks, you are losing money every hour.",
                 leadsLeakageTitle: "Lost Sales",
@@ -572,34 +605,40 @@
                 step2Description: "We deploy our proprietary AI agents on your infrastructure. Sales, support, and operations automated in days, not months.",
                 step3Title: "Continuous Optimization",
                 step3Description: "We don't leave you alone. We monitor performance, tune models, and ensure positive ROI.",
-                pricingTitle: "Invest with Certainty.",
-                pricingSubtext: "Choose the speed at which you want to scale. Subsidized pricing for case studies.",
+                pricingTitle: "Invest in Certainty.",
+                pricingSubtext: "Programs designed to scale. Ask if you qualify for our case study subsidy.",
+                septemberBonus: "🚀 KICK-OFF 2026: $1,000 USD Coupon available for qualified companies.",
                 plan1Name: "AI Takeoff",
                 plan1Tag: "To start fast",
+                plan1Installments: "Ask about payment plans.",
                 plan1Feature1: "Express Strategic Diagnostic.",
                 plan1SaaS: "Annual License BoostifyOS Lite.",
                 plan1Feature2: "1 Lead Qualification AI Agent (Sales).",
-                plan1Cta: "Claim Offer",
-                plan2Badge: "RECOMMENDED",
+                plan1Feature3: "Automation of 2 Key Processes.",
+                plan1Cta: "Schedule Interview",
+                plan2Badge: "BEST SELLER 2025",
                 plan2Name: "AI Acceleration",
                 plan2Tag: "The Complete Hybrid System",
-                plan2Installments: "Payment plans available.",
+                plan2Installments: "3 installments available upon evaluation.",
                 plan2Feature1: "Everything in Takeoff, plus:",
                 plan2SaaS: "PRO License BoostifyOS + Setup.",
-                plan2Feature2: "3 Interconnected AI Systems.",
-                plan2Cta: "Claim Coupon & Book",
-                plan2Subtext: "Only 5 discounted spots.",
+                plan2Feature2: "3 Interconnected AI Systems (Sales + Ops).",
+                plan2Feature3: "Automatic Outbound Prospecting System.",
+                plan2Feature4: "Native CRM Integration (HubSpot/Salesforce).",
+                plan2Cta: "Apply for PRO Access",
+                plan2Subtext: "Only 5 new spots per month.",
                 plan3Name: "Strategic Partner",
                 plan3Tag: "For Market Leaders",
-                plan3Price: "Inquire",
+                plan3Price: "Custom",
                 plan3Subprice: "Consulting + Revenue Share",
                 plan3Feature1: "Dedicated AI Engineering Team.",
-                plan3Feature2: "Fine-tuned LLMs.",
-                plan3Feature5: "Access to 'Leaders Circle'.",
+                plan3Feature2: "Proprietary Model Development (Fine-tuned LLMs).",
+                plan3Feature3: "Advanced Predictive Analytics.",
+                plan3Feature5: "Access to 'Leaders Circle' (Networking).",
                 plan3Cta: "Schedule Partner Meeting",
                 guaranteeTitle: "Ironclad Guarantee",
-                guaranteeDescription: "We eliminate your risk 100%. If after implementing our system for 90 days you don't generate a <strong>positive ROI</strong>, we refund every penny of your money.",
-                guaranteeBold: "🛡️ AND WE PAY YOU AN EXTRA $500 USD",
+                guaranteeDescription: "We eliminate your risk. If after implementing our system and using our software for 90 days you don't generate a <strong>measurable positive ROI</strong>, we refund <strong>100% of your money</strong>.",
+                guaranteeBold: "+ We pay you an additional $500 USD for wasting your time.",
                 successStoriesTitle: "Results That Can't Be Faked",
                 successStoriesSubtext: "Real companies. Auditable figures. Proprietary technology.",
                 testimonial1: "\"BoostifyPro installed their software and in the first week we recovered 120 lost leads. It was like turning on a money-printing machine. The ROI was paid in just 15 days.\"",
@@ -615,14 +654,25 @@
                 metric2: "Avg. Implementation",
                 metric3: "Retention Rate",
                 metric4: "Active AI Support",
+                readyToLeadTitle: "2026 belongs to those who act fast",
+                readyToLeadDescription: "You have two options: Keep guessing or implement a proven system with guaranteed results.",
+                readyToLeadCta: "I Want My AI System",
                 faqTitle: "Frequently Asked Questions",
                 faqQ1: "What is 'Hybrid Consulting'?",
                 faqA1: "It's our unique model. Unlike traditional agencies, we don't just advise you; we give you licenses to our proprietary software (BoostifyOS) so you have the technology running from day 1.",
                 faqQ2: "Is the +$500 USD guarantee real?",
                 faqA2: "Absolutely. We are so confident in our methodology that if we don't achieve positive results in 90 days, we refund your full investment and pay you $500 USD for the inconvenience.",
+                faqQ3: "Do I need a technical team to use BoostifyOS?",
+                faqA3: "No. In the 'Takeoff' and 'Acceleration' plans, we handle the initial setup and integration.",
+                faqQ4: "Is my company data safe?",
+                faqA4: "Enterprise-grade security. We do not use your data to train public models (like free ChatGPT does). Everything operates in isolated environments, and we comply with the strictest privacy standards.",
+                faqQ5: "Does this replace my current employees?",
+                faqA5: "No, it empowers them. AI handles the 'robotic' work (qualifying leads, filling spreadsheets, answering repetitive questions) so your human team can focus on closing deals and creating strategy. Your employees will love not having to do boring tasks.",
+                faqQ6: "My business is very specific, will BoostifyOS work?",
+                faqA6: "80% of B2B processes (sales, support, operations) are universal. The remaining 20% is customized during the 'Acceleration' phase. If your company bills +$10k/month, our system adapts to your flow, not the other way around.",
                 aiAssistantTitle: "BoostifyOS Support",
-                aiAssistantWelcome: "Hello! Want to know how to redeem your $1,000 USD coupon? Ask here.",
-                aiAssistantResponse: "Redirecting to WhatsApp to claim coupon..."
+                aiAssistantWelcome: "Hello! Interested in implementing AI before the year starts?",
+                aiAssistantResponse: "Thank you. A specialist will contact you shortly."
             }
         };
 
@@ -724,9 +774,9 @@
                         aiChatMessages.appendChild(aiResponseDiv);
                         aiChatMessages.scrollTop = aiChatMessages.scrollHeight;
 
-                        // REDIRECCIÓN WHATSAPP (MODIFICADA PARA MENCIONAR EL CUPÓN)
+                        // REDIRECCIÓN WHATSAPP
                         const myPhoneNumber = "56968267402"; 
-                        const encodedMessage = encodeURIComponent(`Hola, quiero canjear el CUPÓN DE $1000 USD y tengo esta duda: ${messageText}`);
+                        const encodedMessage = encodeURIComponent(`Hola BoostifyPro, estaba en su web y tengo esta consulta: ${messageText}`);
                         
                         setTimeout(() => {
                             window.open(`https://wa.me/${myPhoneNumber}?text=${encodedMessage}`, '_blank');
