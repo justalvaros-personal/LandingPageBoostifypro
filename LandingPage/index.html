@@ -1092,16 +1092,30 @@ var CONFIG = {
     document.head.appendChild(t);return t;
   }
 
+  /* GA4 con Modo de Consentimiento v2: carga siempre, sin cookies hasta aceptar */
+  if(CONFIG.ga4){
+    window.dataLayer=window.dataLayer||[];
+    window.gtag=function(){dataLayer.push(arguments)};
+    gtag('consent','default',{
+      ad_storage:'denied', ad_user_data:'denied', ad_personalization:'denied',
+      analytics_storage:'denied', functionality_storage:'denied',
+      personalization_storage:'denied', security_storage:'granted',
+      wait_for_update:500
+    });
+    gtag('js',new Date());
+    gtag('config',CONFIG.ga4,{anonymize_ip:true});
+    inject('https://www.googletagmanager.com/gtag/js?id='+CONFIG.ga4);
+  }
+  function grantConsent(){
+    if(window.gtag) gtag('consent','update',{
+      ad_storage:'granted', ad_user_data:'granted', ad_personalization:'granted',
+      analytics_storage:'granted', functionality_storage:'granted', personalization_storage:'granted'
+    });
+  }
+
   function loadAnalytics(){
+    grantConsent();
     if(loaded) return; loaded=true;
-    if(CONFIG.ga4){
-      inject('https://www.googletagmanager.com/gtag/js?id='+CONFIG.ga4);
-      window.dataLayer=window.dataLayer||[];
-      window.gtag=function(){dataLayer.push(arguments)};
-      gtag('js',new Date());
-      gtag('consent','default',{analytics_storage:'granted'});
-      gtag('config',CONFIG.ga4,{anonymize_ip:true});
-    }
     if(CONFIG.metaPixel){
       !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
       n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
