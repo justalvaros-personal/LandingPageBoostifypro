@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /welcome.html
+Disallow: /gracias.html
+
+Sitemap: https://www.boostify-pro.com/sitemap.xml

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es" class="no-js">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bienvenido · BoostifyPro</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0B0B0C">
+<script>document.documentElement.className='js';</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Literata:opsz,wght@7..72,300;7..72,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --void:#0B0B0C;--surface:#131316;--surface-2:#1C1C20;--line:#2C2C33;--line-soft:#1F1F24;
+  --gold:#E9B824;--gold-grad:linear-gradient(120deg,#F7D774 0%,#E9B824 55%,#D4A11B 100%);
+  --pale:#EDEAE2;--pale-soft:rgba(237,234,226,.80);--pale-faint:rgba(237,234,226,.62);
+  --display:'Archivo',system-ui,sans-serif;--body:'Literata',Georgia,serif;
+  --mono:'IBM Plex Mono',ui-monospace,monospace;
+  --t-2xs:.688rem;--t-xs:.75rem;--t-sm:.875rem;--t-base:1rem;
+  --t-lg:clamp(1.18rem,1.1rem + .34vw,1.35rem);
+  --t-3xl:clamp(1.9rem,1.4rem + 1.9vw,2.9rem);
+  --s2:.5rem;--s3:.75rem;--s4:1rem;--s5:1.5rem;--s6:2rem;--s7:2.75rem;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--void);color:var(--pale);font-family:var(--body);font-size:var(--t-base);
+  line-height:1.66;-webkit-font-smoothing:antialiased;min-height:100vh;
+  display:flex;align-items:center;justify-content:center;padding:clamp(1.25rem,5vw,3rem)}
+::selection{background:var(--gold);color:var(--void)}
+:focus-visible{outline:2.5px solid var(--gold);outline-offset:3px;border-radius:2px}
+h1,h2{font-family:var(--display);font-weight:600;line-height:1.08;letter-spacing:-.03em;text-wrap:balance}
+img{display:block;max-width:100%}
+
+.glow{position:fixed;top:-25%;left:50%;transform:translateX(-50%);width:min(1000px,130%);height:620px;
+  background:radial-gradient(ellipse at center,rgba(233,184,36,.13) 0%,transparent 68%);pointer-events:none;z-index:0}
+.shell{position:relative;z-index:1;width:100%;max-width:640px}
+
+.brand{display:flex;align-items:center;gap:.6rem;justify-content:center;margin-bottom:var(--s7)}
+.brand img{height:34px;width:34px}
+.brand span{font-family:var(--display);font-weight:700;font-size:1.15rem;letter-spacing:-.035em}
+.brand i{font-style:normal;color:var(--gold)}
+
+.head{text-align:center;margin-bottom:var(--s7)}
+.eyebrow{font-family:var(--mono);font-size:var(--t-2xs);font-weight:600;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--gold);margin-bottom:var(--s4)}
+.head h1{font-size:var(--t-3xl);margin-bottom:var(--s4)}
+.head p{color:var(--pale-soft);font-weight:300;font-size:var(--t-lg);max-width:46ch;margin-inline:auto}
+
+.card{background:var(--surface);border:1px solid var(--line);border-radius:3px;padding:clamp(1.5rem,4vw,2.4rem)}
+.card h2{font-size:var(--t-lg);margin-bottom:var(--s3)}
+.card>p{color:var(--pale-faint);font-size:var(--t-sm);margin-bottom:var(--s6)}
+
+.steps{list-style:none;display:grid;gap:var(--s3);margin-bottom:var(--s6);
+  padding-bottom:var(--s6);border-bottom:1px solid var(--line-soft)}
+.steps li{display:grid;grid-template-columns:auto 1fr;gap:var(--s3);align-items:baseline;
+  font-size:var(--t-sm);color:var(--pale-soft)}
+.steps b{font-family:var(--mono);font-size:var(--t-2xs);color:var(--gold);font-weight:600;letter-spacing:.1em}
+
+.field{margin-bottom:var(--s4)}
+.field label{display:block;font-family:var(--mono);font-size:var(--t-2xs);letter-spacing:.14em;
+  text-transform:uppercase;color:var(--pale-faint);font-weight:600;margin-bottom:.45rem}
+.field input,.field textarea{width:100%;background:var(--void);border:1px solid var(--line);border-radius:2px;
+  padding:.85rem .9rem;font-family:var(--body);font-size:var(--t-base);color:var(--pale);transition:border-color .18s}
+.field textarea{min-height:88px;resize:vertical}
+.field input:focus,.field textarea:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(233,184,36,.14)}
+.field input[aria-invalid="true"]{border-color:#C83C3C}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:var(--s4)}
+@media(max-width:520px){.row{grid-template-columns:1fr}}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;width:100%;
+  font-family:var(--mono);font-size:var(--t-xs);font-weight:600;letter-spacing:.07em;text-transform:uppercase;
+  padding:.95rem 1.4rem;border:0;border-radius:2px;background:var(--gold-grad);color:#17130A;
+  cursor:pointer;transition:filter .2s,transform .2s;min-height:46px}
+.btn:hover{filter:brightness(1.08);transform:translateY(-1px)}
+.btn[disabled]{opacity:.55;cursor:wait;transform:none}
+.btn .arw{transition:transform .2s}
+.btn:hover .arw{transform:translateX(3px)}
+
+.msg{margin-top:var(--s4);padding:.9rem 1rem;border-radius:2px;font-size:var(--t-sm);display:none}
+.msg.ok{display:block;background:rgba(233,184,36,.12);border:1px solid var(--gold)}
+.msg.err{display:block;background:rgba(200,60,60,.12);border:1px solid #C83C3C}
+
+.done{display:none;text-align:center}
+.done.on{display:block}
+.done .tick{width:52px;height:52px;border:2px solid var(--gold);border-radius:50%;
+  display:flex;align-items:center;justify-content:center;margin:0 auto var(--s5);
+  color:var(--gold);font-size:1.5rem;line-height:1}
+.done h2{margin-bottom:var(--s3)}
+.done p{color:var(--pale-soft);font-size:var(--t-sm);max-width:40ch;margin-inline:auto}
+
+.foot{text-align:center;margin-top:var(--s6);font-family:var(--mono);font-size:var(--t-2xs);
+  color:var(--pale-faint);letter-spacing:.05em;line-height:1.9}
+.foot a{color:var(--pale-soft)}
+
+@media(prefers-reduced-motion:reduce){*{transition-duration:.001ms!important}}
+</style>
+</head>
+<body>
+<div class="glow" aria-hidden="true"></div>
+
+<main class="shell">
+  <div class="brand">
+    <img id="mark" src="mark.png" alt="" onerror="this.remove()">
+    <span>Boostify<i>Pro</i></span>
+  </div>
+
+  <div id="stage-form">
+    <div class="head">
+      <p class="eyebrow">Pago confirmado</p>
+      <h1>Bienvenido a bordo.</h1>
+      <p>Gracias por la confianza. Queda un paso corto para dejar todo configurado y partir.</p>
+    </div>
+
+    <div class="card">
+      <h2>Siguientes pasos</h2>
+      <p>Con estos datos preparamos tu espacio de trabajo y agendamos el kickoff.</p>
+
+      <ol class="steps">
+        <li><b>01</b><span>Completas el formulario de abajo.</span></li>
+        <li><b>02</b><span>Recibes por correo el acceso y el link del kickoff, dentro de un día hábil.</span></li>
+        <li><b>03</b><span>En la sesión de kickoff levantamos el alcance y fijamos fechas.</span></li>
+      </ol>
+
+      <form id="onboard" novalidate>
+        <div class="row">
+          <div class="field">
+            <label for="name">Nombre completo</label>
+            <input id="name" name="nombre" type="text" required autocomplete="name">
+          </div>
+          <div class="field">
+            <label for="email">Correo electrónico</label>
+            <input id="email" name="email" type="email" required autocomplete="email">
+          </div>
+        </div>
+        <div class="row">
+          <div class="field">
+            <label for="phone">Teléfono</label>
+            <input id="phone" name="telefono" type="tel" required autocomplete="tel" placeholder="+56 9 ...">
+          </div>
+          <div class="field">
+            <label for="company">Empresa</label>
+            <input id="company" name="empresa" type="text" required autocomplete="organization">
+          </div>
+        </div>
+        <div class="field">
+          <label for="notes">Algo que debamos saber antes del kickoff</label>
+          <textarea id="notes" name="notas"></textarea>
+        </div>
+        <div class="hp" aria-hidden="true">
+          <label>No llenar<input name="website" tabindex="-1" autocomplete="off"></label>
+        </div>
+        <button type="submit" class="btn" id="send">Enviar y continuar<span class="arw" aria-hidden="true">&#8594;</span></button>
+        <p class="msg" id="msg" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
+
+  <div class="card done" id="stage-done">
+    <div class="tick" aria-hidden="true">&#10003;</div>
+    <h2>Listo, quedó registrado.</h2>
+    <p>Te escribimos al correo y al WhatsApp con los accesos y el link del kickoff. Si en un día hábil no llega nada, avísanos.</p>
+  </div>
+
+  <p class="foot">
+    BoostifyPro SpA · Chile<br>
+    ¿Dudas? <a href="mailto:hola@boostify-pro.com">hola@boostify-pro.com</a>
+  </p>
+</main>
+
+<script>
+/* ═══════════════════════════════════════════════
+   CONFIGURACIÓN
+   endpoint: webhook de n8n, Formspree o Web3Forms.
+   NUNCA pongas claves de base de datos en este archivo.
+   ═══════════════════════════════════════════════ */
+var CONFIG = {
+  endpoint:     '',                          // p.ej. https://tu-n8n.railway.app/webhook/onboarding
+  fallbackMail: 'hola@boostify-pro.com',
+  requireToken: false                        // true => exige ?t=... en la URL
+};
+
+(function(){
+  var form=document.getElementById('onboard'),
+      btn=document.getElementById('send'),
+      msg=document.getElementById('msg');
+
+  function show(kind,text){ msg.className='msg '+kind; msg.textContent=text; }
+  function mark(el,bad){ el.setAttribute('aria-invalid',bad?'true':'false'); }
+
+  /* puerta opcional por token, para que la URL no sea adivinable */
+  var token=new URLSearchParams(location.search).get('t')||'';
+  if(CONFIG.requireToken && !token){
+    document.getElementById('stage-form').innerHTML=
+      '<div class="card"><h2>Enlace no válido</h2><p style="margin:0">Este enlace no incluye tu código de acceso. '+
+      'Revisa el correo de confirmación de pago o escríbenos a '+
+      '<a href="mailto:'+CONFIG.fallbackMail+'" style="color:var(--gold)">'+CONFIG.fallbackMail+'</a>.</p></div>';
+    return;
+  }
+
+  form.addEventListener('submit', async function(e){
+    e.preventDefault();
+    if(form.website.value) return;                 /* trampa antispam */
+
+    var f={ nombre:form.nombre.value.trim(), email:form.email.value.trim(),
+            telefono:form.telefono.value.trim(), empresa:form.empresa.value.trim(),
+            notas:form.notas.value.trim() };
+
+    var faltan=[];
+    [['nombre','name'],['email','email'],['telefono','phone'],['empresa','company']].forEach(function(p){
+      var el=document.getElementById(p[1]), bad=!f[p[0]];
+      if(p[0]==='email') bad = bad || f.email.indexOf('@')<1 || f.email.indexOf('.')<2;
+      mark(el,bad); if(bad) faltan.push(p[0]);
+    });
+    if(faltan.length){ return show('err','Revisa los campos marcados: '+faltan.join(', ')+'.'); }
+
+    f.token=token; f.origen=location.href; f.fecha=new Date().toISOString();
+    btn.disabled=true; show('','');
+
+    /* sin endpoint configurado: abre el correo con los datos */
+    if(!CONFIG.endpoint){
+      location.href='mailto:'+CONFIG.fallbackMail
+        +'?subject='+encodeURIComponent('Onboarding · '+f.empresa)
+        +'&body='+encodeURIComponent(
+          'Nombre: '+f.nombre+'\nCorreo: '+f.email+'\nTeléfono: '+f.telefono
+          +'\nEmpresa: '+f.empresa+'\n\nNotas:\n'+(f.notas||'—'));
+      btn.disabled=false;
+      document.getElementById('stage-form').style.display='none';
+      document.getElementById('stage-done').classList.add('on');
+      return;
+    }
+
+    try{
+      var ctrl=new AbortController(), to=setTimeout(function(){ctrl.abort()},12000);
+      var r=await fetch(CONFIG.endpoint,{method:'POST',
+            headers:{'Content-Type':'application/json'},
+            body:JSON.stringify(f),signal:ctrl.signal});
+      clearTimeout(to);
+      if(!r.ok) throw new Error('HTTP '+r.status);
+      document.getElementById('stage-form').style.display='none';
+      document.getElementById('stage-done').classList.add('on');
+    }catch(err){
+      btn.disabled=false;
+      show('err','No pudimos enviar tus datos. Inténtalo otra vez o escríbenos a '+CONFIG.fallbackMail+' — no perdiste lo que escribiste.');
+    }
+  });
+
+  /* limpia el estado de error al corregir */
+  form.querySelectorAll('input,textarea').forEach(function(el){
+    el.addEventListener('input',function(){ mark(el,false); });
+  });
+})();
+</script>
+</body>
+</html>
