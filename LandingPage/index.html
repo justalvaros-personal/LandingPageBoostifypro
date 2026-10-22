@@ -111,6 +111,10 @@ p{text-wrap:pretty}
 .btn:hover .arw{transform:translateX(3px)}
 
 /* NAV */
+.promo{background:var(--gold-grad);color:#17130A;text-align:center;padding:.6rem 1rem;font-size:var(--t-sm);line-height:1.4}
+.promo p{margin:0}
+.promo a{color:#17130A;font-weight:700;text-decoration:underline;text-underline-offset:3px;margin-left:.4rem;white-space:nowrap}
+.promo a:hover{text-decoration-thickness:2px}
 .nav{position:sticky;top:0;z-index:60;background:rgba(11,11,12,.92);backdrop-filter:blur(14px);border-bottom:1px solid var(--line-dk)}
 .nav-in{display:flex;align-items:center;justify-content:space-between;gap:var(--s4);height:var(--nav-h)}
 .brand{display:flex;align-items:center;gap:.55rem;text-decoration:none;color:var(--pale);flex-shrink:0;min-height:44px}
@@ -336,6 +340,11 @@ button.btn[disabled]{opacity:.55;cursor:wait}
 <body>
 <a class="skip" href="#contenido" data-i18n="skip">Saltar al contenido</a>
 
+<div class="promo" role="region" aria-label="Anuncio">
+  <p><span data-i18n="promo.t">Acceso anticipado: prueba gratis nuestra nueva herramienta de prospección con IA. Gratis para los primeros 50 usuarios.</span>
+  <a href="https://app.boostify-pro.com/app?utm_source=landing&amp;utm_medium=barra&amp;utm_campaign=registro" data-cta="barra" data-i18n="promo.cta">Quiero ser de los primeros</a></p>
+</div>
+
 <nav class="nav" id="nav" data-open="false" aria-label="Navegación principal">
   <div class="wrap nav-in">
     <a href="#top" class="brand">
@@ -390,7 +399,7 @@ button.btn[disabled]{opacity:.55;cursor:wait}
       <div class="hero-cta">
         <a href="https://calendly.com/boostifypro-clients/30min" class="btn" data-i18n="hero.cta1">Agendar diagnóstico<span class="arw" aria-hidden="true">→</span></a>
         <a href="#practicas" class="btn btn-ghost" data-i18n="hero.cta2">Ver las prácticas</a>
-        <a href="https://app.boostify-pro.com/app?utm_source=landing&amp;utm_medium=hero&amp;utm_campaign=registro" class="btn btn-ghost" data-cta="hero" data-i18n="hero.cta3">Probar la plataforma<span class="arw" aria-hidden="true">→</span></a>
+        <a href="https://app.boostify-pro.com/app?utm_source=landing&amp;utm_medium=hero&amp;utm_campaign=registro" class="btn btn-ghost" data-cta="hero" data-i18n="hero.cta3">Probar gratis la herramienta<span class="arw" aria-hidden="true">→</span></a>
       </div>
     </div>
     <p class="reach">
@@ -730,8 +739,8 @@ button.btn[disabled]{opacity:.55;cursor:wait}
   <div class="wrap">
     <div class="sec-head">
       <p class="eyebrow rv" data-i18n="pl.eye">Plataforma</p>
-      <h2 class="sec-title rv" id="h-plataforma" data-i18n="pl.title">Prospecta con un panel que revisas en un clic.</h2>
-      <p class="lede rv" data-i18n="pl.lede">Es la misma plataforma con la que opera BoostifyPro. Redacta mensajes a dueños de negocio, los revisa para que no suenen a IA y te los deja listos. Tú apruebas y se envía. Crea tu cuenta y pruébala.</p>
+      <h2 class="sec-title rv" id="h-plataforma" data-i18n="pl.title">¿Quieres ser de los primeros en probar nuestra nueva herramienta? Es gratis para los primeros 50 usuarios.</h2>
+      <p class="lede rv" data-i18n="pl.lede">Es la misma plataforma con la que opera BoostifyPro: prospectas con un panel que revisas en un clic. Redacta mensajes a dueños de negocio, los revisa para que no suenen a IA y te los deja listos. Tú apruebas y se envía. Crea tu cuenta y pruébala.</p>
     </div>
     <div class="prods">
       <article class="prod rv"><h3 data-i18n="pl.t1">A medida de cada persona</h3>
@@ -742,7 +751,7 @@ button.btn[disabled]{opacity:.55;cursor:wait}
         <p data-i18n="pl.p3">Cada contacto queda registrado y la cadencia de seguimiento corre sola.</p></article>
     </div>
     <div class="hero-cta" style="margin-top:2.5rem">
-      <a href="https://app.boostify-pro.com/app?utm_source=landing&amp;utm_medium=seccion_plataforma&amp;utm_campaign=registro" class="btn" data-cta="seccion" data-i18n="pl.cta">Crear mi cuenta<span class="arw" aria-hidden="true">→</span></a>
+      <a href="https://app.boostify-pro.com/app?utm_source=landing&amp;utm_medium=seccion_plataforma&amp;utm_campaign=registro" class="btn" data-cta="seccion" data-i18n="pl.cta">Quiero probarla gratis<span class="arw" aria-hidden="true">→</span></a>
       <a href="https://calendly.com/boostifypro-clients/30min" class="btn btn-ghost" data-i18n="pl.cta2">Prefiero una llamada</a>
     </div>
   </div>
@@ -924,13 +933,13 @@ var EN={
 
 "nav.quien":"Fit","nav.prac":"Practices","nav.met":"Method","nav.cas":"Cases","nav.srv":"Services",
 "nav.firm":"The firm","nav.cta":"Book<span class='arw' aria-hidden='true'>→</span>","nav.ctaLong":"Book a diagnostic →",
-"nav.plat":"Platform","hero.cta3":"Try the platform<span class='arw' aria-hidden='true'>→</span>",
-"pl.eye":"Platform","pl.title":"Prospect from a panel you review in one click.",
-"pl.lede":"It is the same platform BoostifyPro runs on. It drafts messages to business owners, checks them so they do not sound like AI, and leaves them ready. You approve and it sends. Create your account and try it.",
+"nav.plat":"Platform","promo.t":"Early access: try our new AI prospecting tool for free. Free for the first 50 users.","promo.cta":"I want to be among the first","hero.cta3":"Try the tool for free<span class='arw' aria-hidden='true'>→</span>",
+"pl.eye":"Platform","pl.title":"Want to be among the first to try our new tool? It is free for the first 50 users.",
+"pl.lede":"It is the same platform BoostifyPro runs on: you prospect from a panel you review in one click. It drafts messages to business owners, checks them so they do not sound like AI, and leaves them ready. You approve and it sends. Create your account and try it.",
 "pl.t1":"Tailored to each person","pl.p1":"Every message starts from their latest post and what their company does, not from a template.",
 "pl.t2":"Review before sending","pl.p2":"It flags AI phrasing, invented facts and generic messages. Nothing goes out without your approval.",
 "pl.t3":"Follow-up in your CRM","pl.p3":"Every contact is logged and the follow-up cadence runs on its own.",
-"pl.cta":"Create my account<span class='arw' aria-hidden='true'>→</span>","pl.cta2":"I would rather book a call",
+"pl.cta":"I want to try it free<span class='arw' aria-hidden='true'>→</span>","pl.cta2":"I would rather book a call",
 "hero.eyebrow":"Revenue · Operations · Talent",
 "hero.h1":"We build the systems your company <i>doesn't have.</i>",
 "hero.sub":"We design the engine that generates your demand, the processes that hold operations together as you grow, and we find the people who will run them. AI absorbs the repetitive work so your team can compete for real. Nobody replaces anybody.",
