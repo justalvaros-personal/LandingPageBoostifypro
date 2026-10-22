@@ -349,6 +349,7 @@ button.btn[disabled]{opacity:.55;cursor:wait}
       <a href="#casos" data-i18n="nav.cas">Casos</a>
       <a href="#entrega" data-i18n="nav.ent">Entrega</a>
       <a href="#servicios" data-i18n="nav.srv">Servicios</a>
+      <a href="#plataforma" data-i18n="nav.plat">Plataforma</a>
       <a href="#contacto" data-i18n="nav.con">Contacto</a>
     </div>
     <div class="nav-end">
@@ -368,6 +369,7 @@ button.btn[disabled]{opacity:.55;cursor:wait}
       <li><a href="#casos" data-i18n="nav.cas">Casos</a></li>
       <li><a href="#entrega" data-i18n="nav.ent">Modelo de entrega</a></li>
       <li><a href="#servicios" data-i18n="nav.srv">Servicios</a></li>
+      <li><a href="#plataforma" data-i18n="nav.plat">Plataforma</a></li>
       <li><a href="#consultora" data-i18n="nav.firm">La consultora</a></li>
       <li><a href="#contacto" data-i18n="nav.con">Contacto</a></li>
       <li><a href="https://calendly.com/boostifypro-clients/30min" data-i18n="nav.ctaLong">Agendar diagnóstico →</a></li>
@@ -388,6 +390,7 @@ button.btn[disabled]{opacity:.55;cursor:wait}
       <div class="hero-cta">
         <a href="https://calendly.com/boostifypro-clients/30min" class="btn" data-i18n="hero.cta1">Agendar diagnóstico<span class="arw" aria-hidden="true">→</span></a>
         <a href="#practicas" class="btn btn-ghost" data-i18n="hero.cta2">Ver las prácticas</a>
+        <a href="https://app.boostify-pro.com/app?utm_source=landing&amp;utm_medium=hero&amp;utm_campaign=registro" class="btn btn-ghost" data-cta="hero" data-i18n="hero.cta3">Probar la plataforma<span class="arw" aria-hidden="true">→</span></a>
       </div>
     </div>
     <p class="reach">
@@ -723,6 +726,28 @@ button.btn[disabled]{opacity:.55;cursor:wait}
   </div>
 </section>
 
+<section class="sec" id="plataforma" aria-labelledby="h-plataforma">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow rv" data-i18n="pl.eye">Plataforma</p>
+      <h2 class="sec-title rv" id="h-plataforma" data-i18n="pl.title">Prospecta con un panel que revisas en un clic.</h2>
+      <p class="lede rv" data-i18n="pl.lede">Es la misma plataforma con la que opera BoostifyPro. Redacta mensajes a dueños de negocio, los revisa para que no suenen a IA y te los deja listos. Tú apruebas y se envía. Crea tu cuenta y pruébala.</p>
+    </div>
+    <div class="prods">
+      <article class="prod rv"><h3 data-i18n="pl.t1">A medida de cada persona</h3>
+        <p data-i18n="pl.p1">Cada mensaje parte de su último post y de lo que hace su empresa, no de una plantilla.</p></article>
+      <article class="prod rv"><h3 data-i18n="pl.t2">Revisión antes de enviar</h3>
+        <p data-i18n="pl.p2">Detecta frases de IA, datos inventados y mensajes genéricos. Nada sale sin tu aprobación.</p></article>
+      <article class="prod rv"><h3 data-i18n="pl.t3">Seguimiento en tu CRM</h3>
+        <p data-i18n="pl.p3">Cada contacto queda registrado y la cadencia de seguimiento corre sola.</p></article>
+    </div>
+    <div class="hero-cta" style="margin-top:2.5rem">
+      <a href="https://app.boostify-pro.com/app?utm_source=landing&amp;utm_medium=seccion_plataforma&amp;utm_campaign=registro" class="btn" data-cta="seccion" data-i18n="pl.cta">Crear mi cuenta<span class="arw" aria-hidden="true">→</span></a>
+      <a href="https://calendly.com/boostifypro-clients/30min" class="btn btn-ghost" data-i18n="pl.cta2">Prefiero una llamada</a>
+    </div>
+  </div>
+</section>
+
 <section class="sec" id="consultora" aria-labelledby="h-consultora">
   <div class="wrap">
     <div class="sec-head">
@@ -899,6 +924,13 @@ var EN={
 
 "nav.quien":"Fit","nav.prac":"Practices","nav.met":"Method","nav.cas":"Cases","nav.srv":"Services",
 "nav.firm":"The firm","nav.cta":"Book<span class='arw' aria-hidden='true'>→</span>","nav.ctaLong":"Book a diagnostic →",
+"nav.plat":"Platform","hero.cta3":"Try the platform<span class='arw' aria-hidden='true'>→</span>",
+"pl.eye":"Platform","pl.title":"Prospect from a panel you review in one click.",
+"pl.lede":"It is the same platform BoostifyPro runs on. It drafts messages to business owners, checks them so they do not sound like AI, and leaves them ready. You approve and it sends. Create your account and try it.",
+"pl.t1":"Tailored to each person","pl.p1":"Every message starts from their latest post and what their company does, not from a template.",
+"pl.t2":"Review before sending","pl.p2":"It flags AI phrasing, invented facts and generic messages. Nothing goes out without your approval.",
+"pl.t3":"Follow-up in your CRM","pl.p3":"Every contact is logged and the follow-up cadence runs on its own.",
+"pl.cta":"Create my account<span class='arw' aria-hidden='true'>→</span>","pl.cta2":"I would rather book a call",
 "hero.eyebrow":"Revenue · Operations · Talent",
 "hero.h1":"We build the systems your company <i>doesn't have.</i>",
 "hero.sub":"We design the engine that generates your demand, the processes that hold operations together as you grow, and we find the people who will run them. AI absorbs the repetitive work so your team can compete for real. Nobody replaces anybody.",
@@ -1236,6 +1268,9 @@ var CONFIG = {
 
 /* ── Eventos de comportamiento ── */
 (function(){
+  document.querySelectorAll('[data-cta]').forEach(function(a){
+    a.addEventListener('click',function(){window.track('cta_plataforma',{ubicacion:a.dataset.cta})});
+  });
   document.querySelectorAll('details summary').forEach(function(s){
     s.addEventListener('click',function(){
       if(!s.parentElement.open) window.track('faq_abierta',{pregunta:s.innerText.slice(0,60)});
