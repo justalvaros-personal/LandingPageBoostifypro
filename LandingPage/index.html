@@ -301,6 +301,7 @@ details p{padding-bottom:var(--s5);color:var(--fg-soft);max-width:68ch;margin-to
 .foot-in{display:flex;justify-content:space-between;align-items:center;gap:var(--s4);flex-wrap:wrap;font-family:var(--mono);font-size:var(--t-2xs);letter-spacing:.06em;line-height:1.8}
 .foot-in a{color:var(--pale-soft);text-decoration:none;transition:color .18s}
 .foot-in a:hover{color:var(--gold)}
+.foot-legal{flex-basis:100%}
 
 .js .form-wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:clamp(2rem,5vw,4.5rem);align-items:start}
 @media(max-width:820px){.form-wrap{grid-template-columns:1fr}}
@@ -871,6 +872,7 @@ button.btn[disabled]{opacity:.55;cursor:wait}
   <div class="wrap foot-in">
     <span data-i18n="ft.l">BoostifyPro SpA · Chile · Proyectos en LATAM y Estados Unidos</span>
     <span><a href="https://cl.linkedin.com/in/justalvaro">LinkedIn</a> · <a href="mailto:hola@boostify-pro.com">hola@boostify-pro.com</a></span>
+    <span class="foot-legal"><a href="/privacidad" data-href-es="/privacidad" data-href-en="/en/privacy" data-i18n="ft.priv">Privacidad</a> · <a href="/terminos" data-href-es="/terminos" data-href-en="/en/terms" data-i18n="ft.terms">Términos</a> · <a href="/cookies">Cookies</a> · <a href="#" id="ck-pref" data-i18n="ft.pref">Preferencias de cookies</a></span>
   </div>
 </footer>
 
@@ -1034,7 +1036,8 @@ var EN={
 "cl.eye":"Next step","cl.h":"Thirty minutes, no pitch.",
 "cl.p":"Tell us how your company works today and we'll tell you straight whether we can help, or whether your problem is something else.",
 "cl.cta":"Book a diagnostic<span class='arw' aria-hidden='true'>→</span>",
-"ft.l":"BoostifyPro SpA · Chile · Projects across LATAM and the United States"
+"ft.l":"BoostifyPro SpA · Chile · Projects across LATAM and the United States",
+"ft.priv":"Privacy","ft.terms":"Terms","ft.pref":"Cookie preferences"
 };
 
 (function(){
@@ -1057,6 +1060,9 @@ var EN={
     nodes.forEach(function(el){
       var v=dict[el.dataset.i18n];
       if(v!==undefined) el.innerHTML=v;
+    });
+    document.querySelectorAll('[data-href-es]').forEach(function(a){
+      a.setAttribute('href',lang==='en'?a.dataset.hrefEn:a.dataset.hrefEs);
     });
     document.documentElement.lang=lang;
     document.title=TITLE[lang];
@@ -1188,6 +1194,10 @@ var CONFIG = {
   });
   document.getElementById('ck-no').addEventListener('click',function(){
     store('bp_consent','no'); banner.dataset.show='false';
+    if(window.gtag) gtag('consent','update',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied'});
+  });
+  document.getElementById('ck-pref').addEventListener('click',function(e){
+    e.preventDefault(); banner.dataset.show='true';
   });
 })();
 
